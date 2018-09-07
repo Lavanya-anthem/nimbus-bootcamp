@@ -53,26 +53,28 @@ NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.0.M1-SN
       The versions are subjected to change.
 
 
-=== Cloning Nimbus (HIP) Framework Code
+=== Cloning Nimbus Framework Code
 
-. Login to 
-[blue]#**https://bitbucket.anthem.com/projects/NIM/repos/anthm-internal-oss-backend/browse**# and search for [navy]#**feature/1.0.0.RC1.**# Select the same from the drop-down
+.  Go to 
+[blue]#**https://github.com/openanthem/nimbus-core**# and select Branch as [navy]#**1.1.0.M2**#.
 +
-image::CL1.png[cl1]
+image::CLL1.png[cl1]
 
-.	Click the clone button and copy the hyperlink
+.	Click the Clone or Download button and copy the hyperlink
 [blue]#**
-https://AF84298@bitbucket.anthem.com/scm/nim/anthm-internal-oss-backend.git **#
+https://github.com/openanthem/nimbus-core.git**#
 
 .	Open Terminal
 
-.	Create a new folder named [navy]#**git**# in your cd /Users/AF84298 
+.	Create a new folder named [navy]#**git**# in your cd /Users/AX12345
 
 .	Navigate to the folder and run the following command
 +
 [subs="quotes"]
 -----------------------------------
-**git clone -b feature/1.0.0.RC1 https://AF84298@bitbucket.anthem.com/scm/nim/anthm-internal-oss-backend.git** 
+**git clone -b 1.1.0.M2 
+https://github.com/openanthem/nimbus-core.git
+** 
 ----------------------------------- 
 . Let’s build the projects by typing the command
 +
