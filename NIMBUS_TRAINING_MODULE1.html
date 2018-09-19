@@ -747,17 +747,27 @@ p.tableblock.header { color: #6d6e71; }
 <li><a href="#_installation_of_jdk">5.2. Installation of JDK</a></li>
 <li><a href="#_installation_of_maven">5.3. Installation of Maven</a></li>
 <li><a href="#_installation_of_git">5.4. Installation of git</a></li>
-<li><a href="#_installation_of_node_js">5.5. Installation of node.js</a></li>
-<li><a href="#_installation_of_docker">5.6. Installation of Docker</a></li>
-<li><a href="#_installation_of_spring_tool_suite">5.7. Installation of Spring Tool Suite</a></li>
-<li><a href="#_installation_of_drools_plugin">5.8. Installation of Drools Plugin</a></li>
-<li><a href="#_installation_of_lombok">5.9. Installation of Lombok</a></li>
-<li><a href="#_install_activiti_plugin">5.10. Install Activiti plugin</a></li>
-<li><a href="#_installation_of_robo_3t_db_client">5.11. Installation of Robo 3T ( DB Client)</a></li>
+<li><a href="#_installation_of_mongodb">5.5. Installation of MongoDB</a></li>
+<li><a href="#_installation_of_spring_tool_suite">5.6. Installation of Spring Tool Suite</a></li>
+<li><a href="#_installation_of_drools_plugin">5.7. Installation of Drools Plugin</a></li>
+<li><a href="#_installation_of_lombok">5.8. Installation of Lombok</a></li>
+<li><a href="#_install_activiti_plugin">5.9. Install Activiti plugin</a></li>
+<li><a href="#_installation_of_visual_studio_code">5.10. Installation of Visual Studio Code</a></li>
+<li><a href="#_installation_of_robo_3t_db_client">5.11. Installation of Robo 3T (DB Client)</a></li>
+<li><a href="#_installation_of_advanced_rest_client">5.12. Installation of Advanced Rest Client</a></li>
 </ul>
 </li>
-<li><a href="#_working_with_mongodb_through_docker">6. Working with MongoDB through Docker</a></li>
-<li><a href="#_certificates_required_for_development">7. Certificates Required for Development</a></li>
+<li><a href="#_certificates_required_for_developmentfor_using_the_framework_within_anthem">6. Certificates Required for Development(For using the framework within Anthem)</a></li>
+<li><a href="#_appendix">7. Appendix</a>
+<ul class="sectlevel2">
+<li><a href="#_how_to_work_with_mongodb_through_docker">7.1. How to work with MongoDB through Docker</a>
+<ul class="sectlevel3">
+<li><a href="#_installation_of_docker">7.1.1. Installation of Docker</a></li>
+<li><a href="#_working_with_mongodb_through_docker">7.1.2. Working with MongoDb through Docker</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li><a href="#_conclusion">8. Conclusion</a></li>
 </ul>
 </div>
@@ -776,43 +786,21 @@ p.tableblock.header { color: #6d6e71; }
 <div class="sect2">
 <h3 id="_introduction">1. Introduction</h3>
 <div class="paragraph">
-<p>This module helps to set up the development environment for nimbus framework.</p>
+<p>This module helps to set up the development environment for NIMBUS framework.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_audience">2. Audience</h3>
 <div class="paragraph">
-<p>This training is designed for java programmers who needs to do the initial development enviornment set up to work with nimbus framework</p>
+<p>Programmers who needs to do the initial development enviornment set up to work with NIMBUS framework</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_technical_pre_requisites">3. Technical Pre-requisites</h3>
-<div class="paragraph">
-<p>The developers are expected to have -</p>
-</div>
 <div class="ulist">
 <ul>
 <li>
-<p>Experience in Spring Framework</p>
-</li>
-<li>
-<p>Good Understanding of:</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Java Programming</p>
-</li>
-<li>
-<p>Maven</p>
-</li>
-<li>
-<p>Docker</p>
-</li>
-<li>
-<p>MongoDB</p>
-</li>
-</ul>
-</div>
+<p>Good Understanding of Java Programming</p>
 </li>
 </ul>
 </div>
@@ -834,7 +822,7 @@ p.tableblock.header { color: #6d6e71; }
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Java</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.0_73</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.8.0_171</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Maven</p></td>
@@ -842,39 +830,27 @@ p.tableblock.header { color: #6d6e71; }
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Lombok</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.16.18</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">NodeJs</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Latest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.18.2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">STS</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.9.1 RELEASE</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">3.9.5 RELEASE</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">VS Code</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1.14.2</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Docker</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Docker CE 17.06 </p></td>
-</tr>
-<tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Robo 3T</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">latest (1.0)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Kitematic</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">v0.17.1</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">1.2.1</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Chrome</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">latest</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Version 63.0.3239.108 (Official Build) (64-bit)</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Advanced Rest Client</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">9.14.64.305-stable</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">arc-12.1.4</p></td>
 </tr>
 </tbody>
 </table>
@@ -899,7 +875,22 @@ Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.0.M1-SN
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Let’s begin by installing Homebrew ,through which we will install other softwares</p>
+<p>We will install the required softwares using Homebrew</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Homebrew (defintion from wikipedia): A free and open-source software package management system that simplifies the installation of software on Apple&#8217;s macOS operating system
+</td>
+</tr>
+</table>
+</div>
+</li>
+<li>
+<p>Let us begin with the installation of Homebrew</p>
 </li>
 <li>
 <p>Go to <span class="blue"><strong> <a href="https://brew.sh/" class="bare">https://brew.sh/</a> </strong></span></p>
@@ -910,26 +901,34 @@ Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.0.M1-SN
 </div>
 </li>
 <li>
-<p>Copy the command below and run the same in your terminal</p>
+<p>Open Terminal</p>
+</li>
+<li>
+<p>Paste the below script in your terminal</p>
 <div class="listingblock">
 <div class="content">
-<pre><strong>/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</strong></pre>
+<pre><span class="navy"><strong> /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </strong></span></pre>
 </div>
 </div>
 </li>
 <li>
-<p>This will prompt for your domain password. Enter the password to begin the installation</p>
+<p>Terminal will prompt for your domain password. Enter the password to begin the installation</p>
 <div class="imageblock">
 <div class="content">
-<img src="Homebrewbash.png" alt="HB">
+<img src="HMBB1.png" alt="HB">
 </div>
 </div>
 </li>
 <li>
-<p>Now we have installed Homebrew. Let&#8217;s check the version by running <span class="navy"><strong>$ brew --version</strong></span> command on your terminal</p>
+<p>Once installed, let us check the version by running the following brew formula  on your terminal</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong>$ brew --version</strong></span></pre>
+</div>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="Homebrewoutput.png" alt="HBO" width="500">
+<img src="HMBB2.png" alt="HBO">
 </div>
 </div>
 </li>
@@ -944,17 +943,30 @@ Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.0.M1-SN
 <p>Run the following brew formula in your terminal</p>
 <div class="listingblock">
 <div class="content">
-<pre><strong>$ brew update
+<pre><span class="navy"><strong>$ brew update
 $ brew tap caskroom/versions
-$ brew cask install java8</strong></pre>
+$ brew cask install java8</strong></span></pre>
 </div>
 </div>
 </li>
 <li>
-<p>This formula prompts for your password. Enter the password to begin the installation of the latest version of java. Get the version by running the formula: <span class="navy"><strong> $ java -version </strong></span></p>
+<p>Terminal will prompt for your domain password. Enter the password to begin the installation</p>
 <div class="imageblock">
 <div class="content">
-<img src="java_version.png" alt="JV">
+<img src="JDKK1.png" alt="JV">
+</div>
+</div>
+</li>
+<li>
+<p>Once installed, let us check the version by running the following brew formula on your terminal</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ java -version </strong></span></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="JDKK2.png" alt="JV">
 </div>
 </div>
 </li>
@@ -966,17 +978,27 @@ $ brew cask install java8</strong></pre>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Run the brew formula  <span class="navy"><strong> $ brew install maven </strong></span> on your terminal.</p>
+<p>Run the following brew formula on your terminal.</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ brew install maven </strong></span></pre>
+</div>
+</div>
 </li>
 <li>
-<p>Once installed, get the version by running the formula        <span class="navy"><strong> $ mvn -v </strong></span>                    on your terminal</p>
-</li>
-</ol>
+<p>Once installed, let us check the version by running the following brew formula on your terminal</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ mvn -v </strong></span></pre>
+</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="maven.png" alt="JV">
+<img src="MAVV.png" alt="JV">
 </div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect3">
@@ -984,34 +1006,88 @@ $ brew cask install java8</strong></pre>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Run the brew formula  <span class="navy"><strong> $ brew install git </strong></span>  on your terminal.</p>
-</li>
-<li>
-<p>Once installed, we can check the installation by running formula        <span class="navy"><strong> $ git --version </strong></span>   on your terminal</p>
-</li>
-<li>
-<p>The terminal shows the following output:</p>
-</li>
-</ol>
+<p>Run the following brew formula on your terminal.</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ brew install git </strong></span></pre>
+</div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="git.png" alt="GV">
+<img src="GIT1.png" alt="JV">
 </div>
+</div>
+</li>
+<li>
+<p>Once installed, let us check the installation by running the following brew formula on your terminal</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ git --version </strong></span></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="GITT2.png" alt="GV">
+</div>
+</div>
+</li>
+</ol>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installation_of_node_js">5.5. Installation of node.js</h4>
+<h4 id="_installation_of_mongodb">5.5. Installation of MongoDB</h4>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Run the brew formula  <span class="navy"><strong> $ brew install node </strong></span> on your terminal.</p>
-</li>
-<li>
-<p>Once installed, get the version by running the formula        <span class="navy"><strong> $ node -v </strong></span>   and  <span class="navy"><strong> $ npm -v </strong></span> on your terminal</p>
+<p>Run the following brew formula in your terminal</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong>
+$ brew install mongodb </strong></span></pre>
+</div>
+</div>
 <div class="imageblock">
 <div class="content">
-<img src="node.png" alt="NV">
+<img src="MDB.png" alt="JV">
+</div>
+</div>
+</li>
+<li>
+<p>Once installed, let us check the version by running the following brew formula on your terminal</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ mongo -version </strong></span></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MDBB2.png" alt="M">
+</div>
+</div>
+</li>
+<li>
+<p>Let us start the mongodb by running the following brew formula</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ brew services start mongodb </strong></span></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MDBB3.png" alt="M">
+</div>
+</div>
+</li>
+<li>
+<p>Let us check if the mongodb is running by running the following brew formula</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ brew services list </strong></span></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="MDBB4.png" alt="M">
 </div>
 </div>
 </li>
@@ -1019,98 +1095,78 @@ $ brew cask install java8</strong></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installation_of_docker">5.6. Installation of Docker</h4>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p>Go to <span class="blue"><strong> <a href="https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac" class="bare">https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac</a> </strong></span></p>
-</li>
-<li>
-<p>Prefer  Stable Docker version over Edge.</p>
-</li>
-<li>
-<p>Double click <span class="navy"><strong> Docker.dmg </strong></span> and open the installer</p>
-</li>
-<li>
-<p>Drag Moby the whale to your <span class="blue"><strong>"/Applications"</strong></span> folder</p>
-<div class="imageblock">
-<div class="content">
-<img src="dckr1.png" alt="DV1">
-</div>
-</div>
-</li>
-<li>
-<p>Go to <span class="blue"><strong>"/Applications"</strong></span> folder and double-click Docker.app to start Docker</p>
-<div class="imageblock">
-<div class="content">
-<img src="dckr2.png" alt="DV2">
-</div>
-</div>
-</li>
-<li>
-<p>The docker app(the whale icon) would be shown in your status bar. You can also access the same from your terminal</p>
-<div class="imageblock">
-<div class="content">
-<img src="dckr3.png" alt="DV3" width="500">
-</div>
-</div>
-</li>
-<li>
-<p>Click the whale icon to see that it is running</p>
-<div class="imageblock">
-<div class="content">
-<img src="dckr4.png" alt="DV4" width="300">
-</div>
-</div>
-</li>
-<li>
-<p>Check the version from your terminal</p>
-<div class="imageblock">
-<div class="content">
-<img src="dckr5.png" alt="DV5">
-</div>
-</div>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_installation_of_spring_tool_suite">5.7. Installation of Spring Tool Suite</h4>
+<h4 id="_installation_of_spring_tool_suite">5.6. Installation of Spring Tool Suite</h4>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
 <p>Run the following brew formulae on your terminal</p>
 <div class="listingblock">
 <div class="content">
-<pre><strong>$ brew update
+<pre><span class="navy"><strong>$ brew update
 $ brew tap caskroom/cask
 $ brew cask search sts
 $ brew cask info sts
-$ brew cask install sts</strong></pre>
+$ brew cask install sts</strong></span></pre>
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="STSS11.png" alt="GV">
 </div>
 </div>
 </li>
 <li>
-<p><span class="navy"><strong>STS</strong></span> will be installed in your <span class="blue"><strong>"/Downloads" </strong></span> folder</p>
+<p><span class="navy"><strong>STS</strong></span> will be installed in your <span class="blue"><strong>"/Applications" </strong></span> folder</p>
+<div class="imageblock">
+<div class="content">
+<img src="STS22.png" alt="GV">
+</div>
+</div>
 </li>
 <li>
-<p>To run STS, open the <span class="blue"><strong> "/Downloads"</strong></span> folder and click on the <strong>"STS"</strong> icon</p>
+<p>To run <span class="navy"><strong>STS</strong></span>, open the <span class="blue"><strong> "/Applications"</strong></span> folder and click on the <strong>"STS"</strong> icon. Click <span class="navy"><strong>Open</strong></span> in the alert window</p>
+<div class="imageblock">
+<div class="content">
+<img src="STS3.png" alt="GV">
+</div>
+</div>
+</li>
+<li>
+<p>Choose a directory as workspace and Launch <span class="navy"><strong>STS</strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="STS4.png" alt="GV">
+</div>
+</div>
+</li>
+<li>
+<p><span class="navy"><strong>STS</strong></span> will be opened</p>
+<div class="imageblock">
+<div class="content">
+<img src="STS5.png" alt="GV">
+</div>
+</div>
 </li>
 </ol>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installation_of_drools_plugin">5.8. Installation of Drools Plugin</h4>
+<h4 id="_installation_of_drools_plugin">5.7. Installation of Drools Plugin</h4>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Open <span class="navy"><strong>  STS </strong></span></p>
-</li>
-<li>
-<p>Click on <span class="navy"><strong>Help &#8594; Install new software </strong></span></p>
+<p>Open <span class="navy"><strong>  STS </strong></span>  from <span class="blue"><strong> "/Applications"</strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="drls1.png" alt="DR5">
+<img src="STS5.png" alt="GV">
+</div>
+</div>
+</li>
+<li>
+<p>Click <span class="navy"><strong>Help &#8594; Install new software </strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="DRL1.png" alt="DR5">
 </div>
 </div>
 </li>
@@ -1131,13 +1187,36 @@ $ brew cask install sts</strong></pre>
 </div>
 </li>
 <li>
-<p>Select the check boxes appropriate for drools</p>
+<p>Select <span class="navy"><strong> Drools and JBPM </strong></span> and click <span class="navy"><strong>Next</strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="DRL3.png" alt="GV">
+</div>
+</div>
 </li>
 <li>
-<p>You may leave <strong>JBoss jBPM task</strong> and <strong>JBoss jBPM Core</strong> unchecked</p>
+<p>Click <span class="navy"><strong>Next</strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="DRL4.png" alt="GV">
+</div>
+</div>
 </li>
 <li>
-<p>Follow the installation instruction</p>
+<p>Accept the Terms and Conditions and click <span class="navy"><strong>Finish </strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="DRL5.png" alt="GV">
+</div>
+</div>
+</li>
+<li>
+<p>Click <span class="navy"><strong>Install anyway</strong></span> in the warning message.</p>
+<div class="imageblock">
+<div class="content">
+<img src="DRL6.png" alt="GV">
+</div>
+</div>
 </li>
 <li>
 <p>Restart the <span class="navy"><strong>STS</strong></span> when prompted</p>
@@ -1146,36 +1225,78 @@ $ brew cask install sts</strong></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installation_of_lombok">5.9. Installation of Lombok</h4>
+<h4 id="_installation_of_lombok">5.8. Installation of Lombok</h4>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Download lombok.jar from <span class="blue"><strong><a href="https://projectlombok.org/setup/eclipse" class="bare">https://projectlombok.org/setup/eclipse</a> </strong></span></p>
-</li>
-<li>
-<p>Right click <span class="navy"><strong>lombok.jar</strong></span> and open</p>
+<p>Goto <span class="blue"><strong><a href="https://projectlombok.org/setup/eclipse" class="bare">https://projectlombok.org/setup/eclipse</a> </strong></span> .Click <span class="navy"><strong>Download</strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="lmk1.png" alt="LK1">
+<img src="LMM1.png" alt="LK1">
 </div>
 </div>
 </li>
 <li>
-<p>Click <span class="navy"><strong>OK </strong></span>. Now click <span class="navy"><strong>Specify Location </strong></span> and choose <span class="navy"><strong>STS &#8594; Contents &#8594;Eclipse &#8594; STS.ini </strong></span></p>
+<p>Click <span class="navy"><strong>Download 1.18.2</strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="lmk2.png" alt="LK2">
+<img src="LM2.png" alt="LK1">
 </div>
 </div>
 </li>
 <li>
-<p>Click <span class="navy"><strong>Install/Update </strong></span> to begin the installation</p>
+<p>You will get a warning message on the left bottom corner of the page. Click <span class="navy"><strong>Keep </strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="LMM3.png" alt="LK1">
+</div>
+</div>
+</li>
+<li>
+<p><span class="navy"><strong> lombok.jar </strong></span> file will be downloaded in your <span class="blue"><strong> "/Downloads"</strong></span> folder</p>
+<div class="imageblock">
+<div class="content">
+<img src="LM4.png" alt="LK1">
+</div>
+</div>
+</li>
+<li>
+<p>Right click and open <span class="navy"><strong> lombok.jar </strong></span> file</p>
+<div class="imageblock">
+<div class="content">
+<img src="LM5.png" alt="LK1">
+</div>
+</div>
+</li>
+<li>
+<p>You will get a warning message. Click <span class="navy"><strong> Open </strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="LM6.png" alt="LK1">
+</div>
+</div>
+</li>
+<li>
+<p>Once opened, your IDE location will be automatically identified by <span class="navy"><strong> lombok</strong></span>. Click <span class="navy"><strong> Install/ Update </strong></span> to begin the installation.</p>
+<div class="imageblock">
+<div class="content">
+<img src="LM7.png" alt="LK1">
+</div>
+</div>
+</li>
+<li>
+<p><span class="navy"><strong> lombok </strong></span> will be installed successfully, Click <span class="navy"><strong> Quit Installer </strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="LM8.png" alt="LK1">
+</div>
+</div>
 </li>
 <li>
 <p>We can check the Lombok installation by clicking <span class="navy"><strong>Spring Tool Suit&#8594;About </strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="lmk3.png" alt="LK3">
+<img src="LM9.png" alt="LK1">
 </div>
 </div>
 </li>
@@ -1183,17 +1304,22 @@ $ brew cask install sts</strong></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_install_activiti_plugin">5.10. Install Activiti plugin</h4>
+<h4 id="_install_activiti_plugin">5.9. Install Activiti plugin</h4>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Open <span class="navy"><strong> STS </strong></span></p>
-</li>
-<li>
-<p>Click on <span class="navy"><strong>Help &#8594; Install new software</strong></span></p>
+<p>Open <span class="navy"><strong>  STS </strong></span>  from <span class="blue"><strong> "/Applications"</strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="drls1.png" alt="LK1">
+<img src="STS5.png" alt="GV">
+</div>
+</div>
+</li>
+<li>
+<p>Click <span class="navy"><strong>Help &#8594; Install new software </strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="DRL1.png" alt="DR5">
 </div>
 </div>
 </li>
@@ -1201,55 +1327,71 @@ $ brew cask install sts</strong></pre>
 <p>Click <span class="navy"><strong>  Add </strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="act2.png" alt="AT2">
+<img src="act2.png" alt="AC">
 </div>
 </div>
 </li>
 <li>
-<p>Enter the <span class="navy"><strong>Name </strong></span> as Activiti designer and <span class="navy"><strong>Location </strong></span> as <span class="blue"><strong> <a href="http://activiti.org/designer/update" class="bare">http://activiti.org/designer/update</a> </strong></span> and click <span class="navy"><strong> OK </strong></span></p>
+<p>Enter the <span class="navy"><strong>Name </strong></span> as Activiti designer and <span class="navy"><strong>Location </strong></span> as <span class="blue"><strong> <a href="http://activiti.org/designer/update" class="bare">http://activiti.org/designer/update</a> </strong></span> and click <span class="navy"><strong> Add </strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="act3.png" alt="AT3">
+<img src="AC1.png" alt="AT2">
 </div>
 </div>
 </li>
 <li>
-<p>Select the checkbox <span class="navy"><strong>‘Activiti BPMN Designer’ </strong></span> and click <span class="navy"><strong> Next </strong></span></p>
+<p>You may/maynot get an <span class="navy"><strong>"Unable to read from repository" </strong></span> error. This  is due to Anthem’s firewall restrictions. You may require <span class="navy"><strong>external/hotspot connection </strong></span> for this step</p>
 <div class="imageblock">
 <div class="content">
-<img src="act4.png" alt="AT4">
+<img src="AC2.png" alt="AT2">
+</div>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="AC3.png" alt="AT2">
 </div>
 </div>
 </li>
 <li>
-<p>Review the item and click <span class="navy"><strong> Next </strong></span></p>
+<p>Click <span class="navy"><strong>OK </strong></span>. Connect to external / hotspot and do <span class="navy"><strong>Step d</strong></span></p>
+</li>
+<li>
+<p>Select <span class="navy"><strong>Activiti BPMN Designer</strong></span> and click <span class="navy"><strong>Next</strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="act5.png" alt="AT5">
+<img src="AC4.png" alt="AT2">
 </div>
 </div>
 </li>
 <li>
-<p>Accept the license agreement and click <span class="navy"><strong>Finish </strong></span></p>
+<p>Click <span class="navy"><strong>Next </strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="act6.png" alt="AT6">
+<img src="AC5.png" alt="AT2">
 </div>
 </div>
 </li>
 <li>
-<p>You will get a Security Warning .Click <span class="navy"><strong> Install anyway</strong></span></p>
+<p>Agree the Terms and Conditions and Click <span class="navy"><strong>Finish</strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="act7.png" alt="AT7">
+<img src="AC6.png" alt="AT2">
 </div>
 </div>
 </li>
 <li>
-<p>Once installed, we will get a restart STS prompt and click on <span class="navy"><strong> Restart Now </strong></span></p>
+<p>Click <span class="navy"><strong>Install anyway</strong></span> in the warning message.</p>
 <div class="imageblock">
 <div class="content">
-<img src="act8.png" alt="AT7">
+<img src="AC7.png" alt="AT2">
+</div>
+</div>
+</li>
+<li>
+<p>Restart <span class="navy"><strong>STS</strong></span> in the warning message.</p>
+<div class="imageblock">
+<div class="content">
+<img src="AC8.png" alt="AT2">
 </div>
 </div>
 </li>
@@ -1257,11 +1399,21 @@ $ brew cask install sts</strong></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installation_of_robo_3t_db_client">5.11. Installation of Robo 3T ( DB Client)</h4>
+<h4 id="_installation_of_visual_studio_code">5.10. Installation of Visual Studio Code</h4>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Go to <a href="https://robomongo.org/" class="bare">https://robomongo.org/</a> and click Download Robo 3T</p>
+<p>Go to <span class="blue"><strong> <a href="https://code.visualstudio.com/" class="bare">https://code.visualstudio.com/</a> </strong></span></p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_installation_of_robo_3t_db_client">5.11. Installation of Robo 3T (DB Client)</h4>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Go to <span class="blue"><strong> <a href="https://robomongo.org/" class="bare">https://robomongo.org/</a> </strong></span> and click Download Robo 3T</p>
 <div class="imageblock">
 <div class="content">
 <img src="R1.png" alt="R1">
@@ -1327,12 +1479,202 @@ $ brew cask install sts</strong></pre>
 </ol>
 </div>
 </div>
+<div class="sect3">
+<h4 id="_installation_of_advanced_rest_client">5.12. Installation of Advanced Rest Client</h4>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Go to <strong> <a href="https://install.advancedrestclient.com/#/install" class="bare">https://install.advancedrestclient.com/#/install</a> </strong></p>
+<div class="imageblock">
+<div class="content">
+<img src="ARC1.png" alt="AR">
+</div>
+</div>
+</li>
+<li>
+<p><span class="navy"><strong> arc-12.1.4.dmg </strong></span> will be downloaded</p>
+<div class="imageblock">
+<div class="content">
+<img src="ARC2a.png" alt="AR">
+</div>
+</div>
+</li>
+<li>
+<p>You can view the same inside the <span class="blue"><strong>"\Downloads" </strong></span> folder</p>
+<div class="imageblock">
+<div class="content">
+<img src="ARC22.png" alt="AR">
+</div>
+</div>
+</li>
+<li>
+<p>Drag and drop <span class="navy"><strong> arc-12.1.4.dmg </strong></span>  to <span class="blue"><strong>"\Applications" </strong></span> folder</p>
+<div class="imageblock">
+<div class="content">
+<img src="ARC3.png" alt="AR">
+</div>
+</div>
+</li>
+<li>
+<p>You can view the same inside the <span class="blue"><strong>"\Applications" </strong></span> folder</p>
+<div class="imageblock">
+<div class="content">
+<img src="ARC4.png" alt="AR">
+</div>
+</div>
+</li>
+<li>
+<p>Open <span class="navy"><strong> AdvancedRestClient </strong></span> from <span class="blue"><strong>"\Applications" </strong></span> folder</p>
+<div class="imageblock">
+<div class="content">
+<img src="ARC5.png" alt="AR">
+</div>
+</div>
+</li>
+<li>
+<p>You can mention the required <span class="navy"><strong> Method </strong></span> and <span class="navy"><strong> Request URL </strong></span></p>
+<div class="imageblock">
+<div class="content">
+<img src="ARC6.png" alt="AR">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
 </div>
 <div class="sect1">
-<h2 id="_working_with_mongodb_through_docker">6. Working with MongoDB through Docker</h2>
+<h2 id="_certificates_required_for_developmentfor_using_the_framework_within_anthem">6. Certificates Required for Development(For using the framework within Anthem)</h2>
 <div class="sectionbody">
 <div class="olist arabic">
 <ol class="arabic">
+<li>
+<p>Download the mentioned certificates:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong><a href="http://pki.wellpoint.com/pki/RootCA_WellPoint%20Internal%20Root%20CA.crt" class="bare">http://pki.wellpoint.com/pki/RootCA_WellPoint%20Internal%20Root%20CA.crt</a></strong></p>
+</li>
+<li>
+<p><strong><a href="http://pki.wellpoint.com/pki/MOM9P70123.us.ad.wellpoint.com_WellPoint%20Internal%20Issuing%20CA%202.crt" class="bare">http://pki.wellpoint.com/pki/MOM9P70123.us.ad.wellpoint.com_WellPoint%20Internal%20Issuing%20CA%202.crt</a></strong></p>
+</li>
+<li>
+<p><strong><a href="http://pki.wellpoint.com/pki/VA10P70803.us.ad.wellpoint.com_WellPoint%20Internal%20Issuing%20CA%201.crt" class="bare">http://pki.wellpoint.com/pki/VA10P70803.us.ad.wellpoint.com_WellPoint%20Internal%20Issuing%20CA%201.crt</a></strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>These files be saved as follows in your <span class="blue"><strong>"/Downloads"</strong></span> folder:</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><strong>RootCA_WellPoint Internal Root CA.crt</strong></p>
+</li>
+<li>
+<p><strong>MOM9P70123.us.ad.wellpoint.com_WellPoint Internal Issuing CA 2.crt</strong></p>
+</li>
+<li>
+<p><strong>VA10P70803.us.ad.wellpoint.com_WellPoint Internal Issuing CA 1.crt</strong></p>
+</li>
+</ol>
+</div>
+</li>
+<li>
+<p>Rename the extensions from “.crt” to “.der” and replace the spaces with underscore
+Example:
+<strong>RootCA_WellPoint Internal Root CA.der should be changed as  RootCA_WellPoint_Internal_Root_CA.der</strong></p>
+</li>
+<li>
+<p>Copy these certificates to <span class="blue"><strong> "/tmp" </strong></span> folder by running  the command <span class="navy"><strong>cp *.der /tmp </strong></span> in   terminal</p>
+</li>
+<li>
+<p>Run these in your command line to add the certificates to your keychain</p>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p><span class="navy"><strong>sudo keytool -import -alias “RootCA_WellPoint_Internal_Root_CA” -storepass changeit -keystore $JAVA_HOME/jre/lib/security/cacerts -file /tmp/RootCA_WellPoint_Internal_Root_CA.der</strong></span></p>
+</li>
+<li>
+<p><span class="navy"><strong> sudo keytool -import -alias MOM9P70123.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_2 -storepass changeit -keystore $JAVA_HOME/jre/lib/security/cacerts -file /tmp/MOM9P70123.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_2.der
+</strong></span></p>
+</li>
+<li>
+<p><span class="navy"><strong> sudo keytool -import -alias VA10P70803.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_1 -storepass changeit -keystore $JAVA_HOME/jre/lib/security/cacerts -file /tmp/VA10P70803.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_1.der
+</strong></span></p>
+</li>
+</ol>
+</div>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_appendix">7. Appendix</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_how_to_work_with_mongodb_through_docker">7.1. How to work with MongoDB through Docker</h3>
+<div class="sect3">
+<h4 id="_installation_of_docker">7.1.1. Installation of Docker</h4>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Go to <span class="blue"><strong> <a href="https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac" class="bare">https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac</a> </strong></span></p>
+</li>
+<li>
+<p>Prefer  Stable Docker version over Edge.</p>
+</li>
+<li>
+<p>Double click <span class="navy"><strong> Docker.dmg </strong></span> and open the installer</p>
+</li>
+<li>
+<p>Drag Moby the whale to your <span class="blue"><strong>"/Applications"</strong></span> folder</p>
+<div class="imageblock">
+<div class="content">
+<img src="dckr1.png" alt="DV1">
+</div>
+</div>
+</li>
+<li>
+<p>Go to <span class="blue"><strong>"/Applications"</strong></span> folder and double-click Docker.app to start Docker</p>
+<div class="imageblock">
+<div class="content">
+<img src="dckr2.png" alt="DV2">
+</div>
+</div>
+</li>
+<li>
+<p>The docker app(the whale icon) would be shown in your status bar. You can also access the same from your terminal</p>
+<div class="imageblock">
+<div class="content">
+<img src="dckr3.png" alt="DV3" width="500">
+</div>
+</div>
+</li>
+<li>
+<p>Click the whale icon to see that it is running</p>
+<div class="imageblock">
+<div class="content">
+<img src="dckr4.png" alt="DV4" width="300">
+</div>
+</div>
+</li>
+<li>
+<p>Check the version from your terminal</p>
+<div class="imageblock">
+<div class="content">
+<img src="dckr5.png" alt="DV5">
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_working_with_mongodb_through_docker">7.1.2. Working with MongoDb through Docker</h4>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
 <li>
 <p>Go to :
 <span class="blue"><strong> <a href="https://bitbucket.anthem.com/projects/NIM/repos/nimbus/browse?at=refs%2Fheads%2Fdevelop" class="bare">https://bitbucket.anthem.com/projects/NIM/repos/nimbus/browse?at=refs%2Fheads%2Fdevelop</a> </strong></span> and click on <span class="navy"><strong> clone </strong></span></p>
@@ -1404,7 +1746,7 @@ Go to <span class="navy"><strong> Kitematic</strong></span> in <span class="navy
 </div>
 </li>
 <li>
-<p>Select <span class="navy"><strong>mongo</strong></span>  and click <span class="navy"><strong>Start</strong></span></p>
+<p>Click <span class="navy"><strong>mongo</strong></span>  and click <span class="navy"><strong>Start</strong></span></p>
 <div class="imageblock">
 <div class="content">
 <img src="md6.png" alt="MD">
@@ -1414,71 +1756,6 @@ Go to <span class="navy"><strong> Kitematic</strong></span> in <span class="navy
 </ol>
 </div>
 </div>
-</div>
-<div class="sect1">
-<h2 id="_certificates_required_for_development">7. Certificates Required for Development</h2>
-<div class="sectionbody">
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Download the mentioned certificates:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p><strong><a href="http://pki.wellpoint.com/pki/RootCA_WellPoint%20Internal%20Root%20CA.crt" class="bare">http://pki.wellpoint.com/pki/RootCA_WellPoint%20Internal%20Root%20CA.crt</a></strong></p>
-</li>
-<li>
-<p><strong><a href="http://pki.wellpoint.com/pki/MOM9P70123.us.ad.wellpoint.com_WellPoint%20Internal%20Issuing%20CA%202.crt" class="bare">http://pki.wellpoint.com/pki/MOM9P70123.us.ad.wellpoint.com_WellPoint%20Internal%20Issuing%20CA%202.crt</a></strong></p>
-</li>
-<li>
-<p><strong><a href="http://pki.wellpoint.com/pki/VA10P70803.us.ad.wellpoint.com_WellPoint%20Internal%20Issuing%20CA%201.crt" class="bare">http://pki.wellpoint.com/pki/VA10P70803.us.ad.wellpoint.com_WellPoint%20Internal%20Issuing%20CA%201.crt</a></strong></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>These files be saved as follows in your <span class="blue"><strong>"/Downloads"</strong></span> folder:</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p><strong>RootCA_WellPoint Internal Root CA.crt</strong></p>
-</li>
-<li>
-<p><strong>MOM9P70123.us.ad.wellpoint.com_WellPoint Internal Issuing CA 2.crt</strong></p>
-</li>
-<li>
-<p><strong>VA10P70803.us.ad.wellpoint.com_WellPoint Internal Issuing CA 1.crt</strong></p>
-</li>
-</ol>
-</div>
-</li>
-<li>
-<p>Rename the extensions from “.crt” to “.der” and replace the spaces with underscore
-Example:
-<strong>RootCA_WellPoint Internal Root CA.der should be changed as  RootCA_WellPoint_Internal_Root_CA.der</strong></p>
-</li>
-<li>
-<p>Copy these certificates to <span class="blue"><strong> "/tmp" </strong></span> folder by running  the command <span class="navy"><strong>cp *.der /tmp </strong></span> in   terminal</p>
-</li>
-<li>
-<p>Run these in your command line to add the certificates to your keychain</p>
-<div class="olist loweralpha">
-<ol class="loweralpha" type="a">
-<li>
-<p><span class="navy"><strong>sudo keytool -import -alias “RootCA_WellPoint_Internal_Root_CA” -storepass changeit -keystore $JAVA_HOME/jre/lib/security/cacerts -file /tmp/RootCA_WellPoint_Internal_Root_CA.der</strong></span></p>
-</li>
-<li>
-<p><span class="navy"><strong> sudo keytool -import -alias MOM9P70123.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_2 -storepass changeit -keystore $JAVA_HOME/jre/lib/security/cacerts -file /tmp/MOM9P70123.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_2.der
-</strong></span></p>
-</li>
-<li>
-<p><span class="navy"><strong> sudo keytool -import -alias VA10P70803.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_1 -storepass changeit -keystore $JAVA_HOME/jre/lib/security/cacerts -file /tmp/VA10P70803.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_1.der
-</strong></span></p>
-</li>
-</ol>
-</div>
-</li>
-</ol>
 </div>
 </div>
 </div>
@@ -1495,7 +1772,7 @@ Have a happy coding !</p>
 <div id="footer">
 <div id="footer-text">
 Version v1.1<br>
-Last updated 2018-08-29 15:20:10 EDT
+Last updated 2018-09-19 14:18:09 EDT
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">

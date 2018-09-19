@@ -20,22 +20,16 @@
 
 === Introduction
 
-This module helps to set up the development environment for nimbus framework.
+This module helps to set up the development environment for NIMBUS framework.
 
 === Audience
 
-This training is designed for java programmers who needs to do the initial development enviornment set up to work with nimbus framework
+Programmers who needs to do the initial development enviornment set up to work with NIMBUS framework
 
 === Technical Pre-requisites
 
-The developers are expected to have -
+* Good Understanding of Java Programming
 
-* Experience in Spring Framework
-* Good Understanding of:
- ** Java Programming
- ** Maven
- ** Docker
- ** MongoDB
 
 === Installables
 .Development Softwares
@@ -43,17 +37,14 @@ The developers are expected to have -
 |=========================================================
 |Application Name | Version 
 
-|Java	|1.8.0_73 
+|Java	|1.8.0_171 
 |Maven	 |3.5.3
-|Lombok	|1.16.18
-|NodeJs	|Latest
-|STS	|3.9.1 RELEASE 
+|Lombok	|1.18.2
+|STS	|3.9.5 RELEASE 
 |VS Code	|1.14.2 
-|Docker	|Docker CE 17.06 
-|Robo 3T	|latest (1.0)
-|Kitematic	|v0.17.1
-|Chrome	|latest
-|Advanced Rest Client	|9.14.64.305-stable
+|Robo 3T	|1.2.1
+|Chrome	|Version 63.0.3239.108 (Official Build) (64-bit)
+|Advanced Rest Client	|arc-12.1.4
 
 
 |=========================================================
@@ -64,86 +55,136 @@ NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.0.M1-SN
 === Installations
 
 ==== Installation of Homebrew
-..	Let’s begin by installing Homebrew ,through which we will install other softwares
+..	We will install the required softwares using Homebrew
++
+NOTE: Homebrew (defintion from wikipedia): A free and open-source software package management system that simplifies the installation of software on Apple's macOS operating system 
+
+.. Let us begin with the installation of Homebrew 
 ..	Go to [blue]#** https://brew.sh/ **#
 +
 image::Homebrew_install.png[HB]
 
-.. Copy the command below and run the same in your terminal
+.. Open Terminal
+.. Paste the below script in your terminal
 +
 [subs="quotes"]
 -----------------------------------
-*/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"* 
+[navy]#** /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" **#
 ----------------------------------- 
 
-.. This will prompt for your domain password. Enter the password to begin the installation
+.. Terminal will prompt for your domain password. Enter the password to begin the installation
 +
-image::Homebrewbash.png[HB]
-
-.. Now we have installed Homebrew. Let's check the version by running [navy]#**$ brew --version**# command on your terminal
+image::HMBB1.png[HB]
+..  Once installed, let us check the version by running the following brew formula  on your terminal
 +
-image::Homebrewoutput.png[HBO,500]
+[subs="quotes"]
+-----------------------------------
+[navy]#**$ brew --version**#
+-----------------------------------
++
+image::HMBB2.png[HBO]
 
 ==== Installation of JDK
 ..	Run the following brew formula in your terminal
 +
 [subs="quotes"]
 -----------------------------------
-*$ brew update
+[navy]#**$ brew update
 $ brew tap caskroom/versions
-$ brew cask install java8*
+$ brew cask install java8**#
 
 -----------------------------------
 
-.. This formula prompts for your password. Enter the password to begin the installation of the latest version of java. Get the version by running the formula: [navy]#** $ java -version **# 
+.. Terminal will prompt for your domain password. Enter the password to begin the installation
 +
-image::java_version.png[JV]
+image::JDKK1.png[JV]
+
+..  Once installed, let us check the version by running the following brew formula on your terminal
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ java -version **#
+
+-----------------------------------
++
+image::JDKK2.png[JV]
 
 ==== Installation of Maven
 
-..	Run the brew formula  [navy]#** $ brew install maven **# on your terminal. 
-..	Once installed, get the version by running the formula        [navy]#** $ mvn -v **#                    on your terminal
+..	Run the following brew formula on your terminal. 
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ brew install maven **#
+-----------------------------------
 
-image::maven.png[JV]
+..  Once installed, let us check the version by running the following brew formula on your terminal        
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ mvn -v **# 
+-----------------------------------
++
+image::MAVV.png[JV]
 
 ==== Installation of git
 
-..	Run the brew formula  [navy]#** $ brew install git **#  on your terminal. 
-.. Once installed, we can check the installation by running formula        [navy]#** $ git --version **#   on your terminal
-.. The terminal shows the following output:
-
-image::git.png[GV]
-
-==== Installation of node.js
-
-.. Run the brew formula  [navy]#** $ brew install node **# on your terminal. 
-.. Once installed, get the version by running the formula        [navy]#** $ node -v **#   and  [navy]#** $ npm -v **# on your terminal
-
+..	Run the following brew formula on your terminal.
 +
-image::node.png[NV]
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ brew install git **#
+-----------------------------------
++
+image::GIT1.png[JV]
+.. Once installed, let us check the installation by running the following brew formula on your terminal
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ git --version **#  
+-----------------------------------
++
+image::GITT2.png[GV]
 
-==== Installation of Docker
+==== Installation of MongoDB
+..	Run the following brew formula in your terminal
++
+[subs="quotes"]
+-----------------------------------
+[navy]#**
+$ brew install mongodb **#
 
-..	Go to [blue]#** https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac **#
-..	Prefer  Stable Docker version over Edge.
-..	Double click [navy]#** Docker.dmg **# and open the installer
-..	Drag Moby the whale to your [blue]#**"/Applications"**# folder
+-----------------------------------
 +
-image::dckr1.png[DV1]
-.. Go to [blue]#**"/Applications"**# folder and double-click Docker.app to start Docker 
-+
-image::dckr2.png[DV2]
-.. The docker app(the whale icon) would be shown in your status bar. You can also access the same from your terminal
-+
-image::dckr3.png[DV3,500]
+image::MDB.png[JV]
 
-..	Click the whale icon to see that it is running
+..  Once installed, let us check the version by running the following brew formula on your terminal
 +
-image::dckr4.png[DV4,300]
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ mongo -version **#
 
-..	Check the version from your terminal 
+-----------------------------------
 +
-image::dckr5.png[DV5]
+image::MDBB2.png[M]
+.. Let us start the mongodb by running the following brew formula 
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ brew services start mongodb **#
+
+-----------------------------------
++
+image::MDBB3.png[M]
+.. Let us check if the mongodb is running by running the following brew formula
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ brew services list **#
+
+-----------------------------------
++
+image::MDBB4.png[M]
 
 ==== Installation of Spring Tool Suite 
 
@@ -151,23 +192,36 @@ image::dckr5.png[DV5]
 +
 [subs="quotes"]
 -----------------------------------
-*$ brew update
+[navy]#**$ brew update
 $ brew tap caskroom/cask
 $ brew cask search sts
 $ brew cask info sts
-$ brew cask install sts*
+$ brew cask install sts**#
 -----------------------------------
++
+image::STSS11.png[GV]
+.. [navy]#**STS**# will be installed in your [blue]#**"/Applications" **# folder
++
+image::STS22.png[GV]
+.. To run [navy]#**STS**#, open the [blue]#** "/Applications"**# folder and click on the **"STS"** icon. Click [navy]#**Open**# in the alert window
++
+image::STS3.png[GV]
+.. Choose a directory as workspace and Launch [navy]#**STS**#
++
+image::STS4.png[GV]
 
-.. [navy]#**STS**# will be installed in your [blue]#**"/Downloads" **# folder
-.. To run STS, open the [blue]#** "/Downloads"**# folder and click on the **"STS"** icon
-
+.. [navy]#**STS**# will be opened
++
+image::STS5.png[GV]
 
 ==== Installation of Drools Plugin
 
-..	Open [navy]#**  STS **#  
-..	Click on [navy]#**Help -> Install new software **#      
+..	Open [navy]#**  STS **#  from [blue]#** "/Applications"**#
 +
-image::drls1.png[DR5]
+image::STS5.png[GV]
+..	Click [navy]#**Help -> Install new software **#      
++
+image::DRL1.png[DR5]
 
 .. Enter [navy]#**Work with**#  as [blue]#** http://download.jboss.org/drools/release/5.5.0.Final/org.drools.updatesite/ **# and click [navy]#**Add **#
 +
@@ -176,59 +230,93 @@ image::drls2.png[DR5]
 .. Enter [navy]#**Name **# as Drools and [navy]#**Location **# as [blue]#**http://download.jboss.org/drools/release/5.5.0.Final/org.drools.updatesite/ **#
 +
 image::drls3.png[DR5]
-.. Select the check boxes appropriate for drools
-.. You may leave **JBoss jBPM task** and **JBoss jBPM Core** unchecked
-.. Follow the installation instruction
+.. Select [navy]#** Drools and JBPM **# and click [navy]#**Next**#
++
+image::DRL3.png[GV]
+.. Click [navy]#**Next**#
++
+image::DRL4.png[GV]
+.. Accept the Terms and Conditions and click [navy]#**Finish **#
++
+image::DRL5.png[GV]
+.. Click [navy]#**Install anyway**# in the warning message.
++
+image::DRL6.png[GV]
 .. Restart the [navy]#**STS**# when prompted
 
 ==== Installation of Lombok
 
-.. Download lombok.jar from [blue]#**https://projectlombok.org/setup/eclipse **#
-..	Right click [navy]#**lombok.jar**# and open 
+.. Goto [blue]#**https://projectlombok.org/setup/eclipse **# .Click [navy]#**Download**#
 +
-image::lmk1.png[LK1]
-
-.. Click [navy]#**OK **#. Now click [navy]#**Specify Location **# and choose [navy]#**STS -> Contents ->Eclipse -> STS.ini **#
+image::LMM1.png[LK1]
+.. Click [navy]#**Download 1.18.2**#
 +
-image::lmk2.png[LK2]
-.. Click [navy]#**Install/Update **# to begin the installation
+image::LM2.png[LK1]
+.. You will get a warning message on the left bottom corner of the page. Click [navy]#**Keep **#
++
+image::LMM3.png[LK1]
+.. [navy]#** lombok.jar **# file will be downloaded in your [blue]#** "/Downloads"**# folder
++
+image::LM4.png[LK1]
+.. Right click and open [navy]#** lombok.jar **# file
++
+image::LM5.png[LK1]
+.. You will get a warning message. Click [navy]#** Open **#
++
+image::LM6.png[LK1]
+.. Once opened, your IDE location will be automatically identified by [navy]#** lombok**#. Click [navy]#** Install/ Update **# to begin the installation.
++
+image::LM7.png[LK1]
+.. [navy]#** lombok **# will be installed successfully, Click [navy]#** Quit Installer **#
++
+image::LM8.png[LK1]
 .. We can check the Lombok installation by clicking [navy]#**Spring Tool Suit->About **#
 +
-image::lmk3.png[LK3]
+image::LM9.png[LK1]
 
 ==== Install Activiti plugin
 
-.. Open [navy]#** STS **#  
-.. Click on [navy]#**Help -> Install new software**#       
+..	Open [navy]#**  STS **#  from [blue]#** "/Applications"**#
 +
-image::drls1.png[LK1]
-.. Click [navy]#**  Add **#  
+image::STS5.png[GV]
+..	Click [navy]#**Help -> Install new software **#      
 +
-image::act2.png[AT2]
-.. Enter the [navy]#**Name **# as Activiti designer and [navy]#**Location **# as [blue]#** http://activiti.org/designer/update **# and click [navy]#** OK **#
+image::DRL1.png[DR5]
+.. Click [navy]#**  Add **# 
 +
-image::act3.png[AT3]
-.. Select the checkbox [navy]#**‘Activiti BPMN Designer’ **# and click [navy]#** Next **#
+image::act2.png[AC]
+.. Enter the [navy]#**Name **# as Activiti designer and [navy]#**Location **# as [blue]#** http://activiti.org/designer/update **# and click [navy]#** Add **# 
 +
-image::act4.png[AT4]
-.. Review the item and click [navy]#** Next **#
+image::AC1.png[AT2]
+.. You may/maynot get an [navy]#**"Unable to read from repository" **# error. This  is due to Anthem’s firewall restrictions. You may require [navy]#**external/hotspot connection **# for this step
 +
-image::act5.png[AT5]
+image::AC2.png[AT2]
++
+image::AC3.png[AT2]
+.. Click [navy]#**OK **#. Connect to external / hotspot and do [navy]#**Step d**# 
+.. Select [navy]#**Activiti BPMN Designer**# and click [navy]#**Next**#
++
+image::AC4.png[AT2]
+.. Click [navy]#**Next **#
++
+image::AC5.png[AT2]
+.. Agree the Terms and Conditions and Click [navy]#**Finish**#
++
+image::AC6.png[AT2]
+.. Click [navy]#**Install anyway**# in the warning message.
++
+image::AC7.png[AT2]
+.. Restart [navy]#**STS**# in the warning message.
++
+image::AC8.png[AT2]
 
-.. Accept the license agreement and click [navy]#**Finish **#
-+
-image::act6.png[AT6]
+==== Installation of Visual Studio Code
 
-.. You will get a Security Warning .Click [navy]#** Install anyway**#
-+
-image::act7.png[AT7]
-.. Once installed, we will get a restart STS prompt and click on [navy]#** Restart Now **#
-+
-image::act8.png[AT7]
+.. Go to [blue]#** https://code.visualstudio.com/ **#
 
-==== Installation of Robo 3T ( DB Client)
+==== Installation of Robo 3T (DB Client)
 
-..	Go to https://robomongo.org/ and click Download Robo 3T
+.. Go to [blue]#** https://robomongo.org/ **# and click Download Robo 3T
 +
 image::R1.png[R1]
 
@@ -259,57 +347,30 @@ image::R7.png[R7]
 +
 image::R8.png[R8]
 
-== Working with MongoDB through Docker
-
-. Go to :
-[blue]#** https://bitbucket.anthem.com/projects/NIM/repos/nimbus/browse?at=refs%2Fheads%2Fdevelop **# and click on [navy]#** clone **#
-
+==== Installation of Advanced Rest Client
+.. Go to ** https://install.advancedrestclient.com/#/install **
 +
-image::md1.png[MD] 
+image::ARC1.png[AR]
+.. [navy]#** arc-12.1.4.dmg **# will be downloaded
++
+image::ARC2a.png[AR]
+.. You can view the same inside the [blue]#**"\Downloads" **# folder
++
+image::ARC22.png[AR]
+.. Drag and drop [navy]#** arc-12.1.4.dmg **#  to [blue]#**"\Applications" **# folder
++
+image::ARC3.png[AR]
+.. You can view the same inside the [blue]#**"\Applications" **# folder
++
+image::ARC4.png[AR]
+.. Open [navy]#** AdvancedRestClient **# from [blue]#**"\Applications" **# folder
++
+image::ARC5.png[AR]
+.. You can mention the required [navy]#** Method **# and [navy]#** Request URL **# 
++
+image::ARC6.png[AR]
 
-. Copy the link
-+
-image::md2.png[MD] 
-
-. Create a temporary folder on the Desktop named [blue]#**"Temp"**#
-. Open terminal, go to the Temp location and paste the following command 
-+
-[subs="quotes"]
------------------------------------
-*git clone -b develop https://AF12345@bitbucket.anthem.com/scm/nim/nimbus.git*
------------------------------------ 
-. We will get the cloning to ‘nimbus’  message on the terminal. We are doing this activity to get the script file which is required to pull the docker images.
-+
-image::md3.png[MD] 
-
-. Once we are done with cloning, let’s check the contents by going to [blue]#** "nimbus" **# folder and listing the files in it
-+
-[subs="quotes"]
------------------------------------
-*LC02WN0NMHTDD:Temp AF12345$ cd nimbus/
-LC02WN0NMHTDD:Temp AF12345$ ls*
------------------------------------
-
-. Let’s pull the docker images using the sh dev command
-+
-[subs="quotes"]
------------------------------------
-*sh dev-script-p-dep-all-start.sh*
------------------------------------
-. The script will run with successful output on the terminal
-+
-image::md4.png[MD] 
-
-. Now we can delete the [blue]#** "Temp"**# folder.
-Go to [navy]#** Kitematic**# in [navy]#** Docker**#
-+
-image::md5.png[MD,300] 
-. 	Select [navy]#**mongo**#  and click [navy]#**Start**#
-+
-image::md6.png[MD] 
-
-
-== Certificates Required for Development
+== Certificates Required for Development(For using the framework within Anthem)
 
 . Download the mentioned certificates:
  
@@ -334,6 +395,83 @@ Example:
 **#
 .. [navy]#** sudo keytool -import -alias VA10P70803.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_1 -storepass changeit -keystore $JAVA_HOME/jre/lib/security/cacerts -file /tmp/VA10P70803.us.ad.wellpoint.com_WellPoint_Internal_Issuing_CA_1.der
 **#
+
+== Appendix
+=== How to work with MongoDB through Docker
+
+==== Installation of Docker
+
+..	Go to [blue]#** https://docs.docker.com/v17.12/docker-for-mac/install/#download-docker-for-mac **#
+..	Prefer  Stable Docker version over Edge.
+..	Double click [navy]#** Docker.dmg **# and open the installer
+..	Drag Moby the whale to your [blue]#**"/Applications"**# folder
++
+image::dckr1.png[DV1]
+.. Go to [blue]#**"/Applications"**# folder and double-click Docker.app to start Docker 
++
+image::dckr2.png[DV2]
+.. The docker app(the whale icon) would be shown in your status bar. You can also access the same from your terminal
++
+image::dckr3.png[DV3,500]
+
+..	Click the whale icon to see that it is running
++
+image::dckr4.png[DV4,300]
+
+..	Check the version from your terminal 
++
+image::dckr5.png[DV5]
+
+==== Working with MongoDb through Docker
+.. Go to :
+[blue]#** https://bitbucket.anthem.com/projects/NIM/repos/nimbus/browse?at=refs%2Fheads%2Fdevelop **# and click on [navy]#** clone **#
+
++
+image::md1.png[MD] 
+
+.. Copy the link
++
+image::md2.png[MD] 
+
+.. Create a temporary folder on the Desktop named [blue]#**"Temp"**#
+.. Open terminal, go to the Temp location and paste the following command 
++
+[subs="quotes"]
+-----------------------------------
+*git clone -b develop https://AF12345@bitbucket.anthem.com/scm/nim/nimbus.git*
+----------------------------------- 
+.. We will get the cloning to ‘nimbus’  message on the terminal. We are doing this activity to get the script file which is required to pull the docker images.
++
+image::md3.png[MD] 
+
+.. Once we are done with cloning, let’s check the contents by going to [blue]#** "nimbus" **# folder and listing the files in it
++
+[subs="quotes"]
+-----------------------------------
+*LC02WN0NMHTDD:Temp AF12345$ cd nimbus/
+LC02WN0NMHTDD:Temp AF12345$ ls*
+-----------------------------------
+
+.. Let’s pull the docker images using the sh dev command
++
+[subs="quotes"]
+-----------------------------------
+*sh dev-script-p-dep-all-start.sh*
+-----------------------------------
+.. The script will run with successful output on the terminal
++
+image::md4.png[MD] 
+
+.. Now we can delete the [blue]#** "Temp"**# folder.
+Go to [navy]#** Kitematic**# in [navy]#** Docker**#
++
+image::md5.png[MD,300] 
+.. 	Click [navy]#**mongo**#  and click [navy]#**Start**#
++
+image::md6.png[MD] 
+
+
+
 
 == Conclusion
 Your are all set!
