@@ -84,6 +84,8 @@ image::HMBB1.png[HB]
 +
 image::HMBB2.png[HBO]
 
+.. [navy]#**Homebrew **# is installed!
+
 ==== Installation of JDK
 ..	Run the following brew formula in your terminal
 +
@@ -109,6 +111,8 @@ image::JDKK1.png[JV]
 +
 image::JDKK2.png[JV]
 
+.. [navy]#**Java 1.8.0.171**# is installed!
+
 ==== Installation of Maven
 
 ..	Run the following brew formula on your terminal. 
@@ -126,6 +130,9 @@ image::JDKK2.png[JV]
 -----------------------------------
 +
 image::MAVV.png[JV]
+
+.. [navy]#** Apache Maven 3.5.4 **# is installed!
+
 
 ==== Installation of git
 
@@ -145,6 +152,10 @@ image::GIT1.png[JV]
 -----------------------------------
 +
 image::GITT2.png[GV]
+
+.. [navy]#**Git 2.14.3**# is installed!
+
+
 
 ==== Installation of MongoDB
 ..	Run the following brew formula in your terminal
@@ -186,6 +197,9 @@ image::MDBB3.png[M]
 +
 image::MDBB4.png[M]
 
+.. [navy]#**MongoDB v4.0.2 **# is installed!
+
+
 ==== Installation of Spring Tool Suite 
 
 ..	Run the following brew formulae on your terminal 
@@ -213,6 +227,9 @@ image::STS4.png[GV]
 .. [navy]#**STS**# will be opened
 +
 image::STS5.png[GV]
+
+.. [navy]#**STS 3.9.5 **# is installed!
+
 
 ==== Installation of Drools Plugin
 
@@ -244,6 +261,9 @@ image::DRL5.png[GV]
 image::DRL6.png[GV]
 .. Restart the [navy]#**STS**# when prompted
 
+.. [navy]#**Drools **# is installed!
+
+
 ==== Installation of Lombok
 
 .. Goto [blue]#**https://projectlombok.org/setup/eclipse **# .Click [navy]#**Download**#
@@ -273,6 +293,9 @@ image::LM8.png[LK1]
 .. We can check the Lombok installation by clicking [navy]#**Spring Tool Suit->About **#
 +
 image::LM9.png[LK1]
+
+.. [navy]#**Lombok 1.18.2 **# is installed!
+
 
 ==== Install Activiti plugin
 
@@ -310,9 +333,33 @@ image::AC7.png[AT2]
 +
 image::AC8.png[AT2]
 
-==== Installation of Visual Studio Code
+.. [navy]#**Activiti Eclipse BPMN 2.0 Designer **# is installed!
 
-.. Go to [blue]#** https://code.visualstudio.com/ **#
+
+==== Installation of Visual Studio Code
+.. You may require [navy]#**external/hotspot connection **# for installation of [navy]#**Visual Studio Code **# 
+.. Go to [blue]#** https://code.visualstudio.com/ **# . Click [navy]#**Download for Mac**# 
++
+image::VSC1.png[VS]
+.. [navy]#** VSCode-darwin-stable.zip **# would be downloaded.
++
+image::VSC2.png[VS]
+.. Double click [navy]#** VSCode-darwin-stable.zip **#  
++
+image::VSC22.png[VS]
+.. You can view the [navy]#**Visual Studio Code **# application inside the [blue]#** "\Downloads" **# folder 
++
+image::VSC3.png[VS]
+.. Double click and open [navy]#**Visual Studio Code **# . Click [navy]#**Open**# in the warning message.
++
+image::VSC4.png[VS]
+.. [navy]#**Visual Studio Code **# will be opened.
++
+image::VSC5.png[VS]
+
+
+.. [navy]#**VS Code darwin stable **# is installed!
+
 
 ==== Installation of Robo 3T (DB Client)
 
@@ -328,7 +375,7 @@ image::R2.png[R2]
 +
 image::R3.png[R3]
 
-.. Open the downloaded dmg file . Drag and drop Robo 3T to [blue]#** "Applications" **# folder 
+.. Open the downloaded dmg file . Drag and drop Robo 3T to [blue]#** "\Applications" **# folder 
 +
 image::R4.png[R4]
 
@@ -346,6 +393,9 @@ image::R7.png[R7]
 .. Click [navy]#** Connect**# to establish connection with DB
 +
 image::R8.png[R8]
+
+.. [navy]#**Robo 3T 1.2  **# is installed!
+
 
 ==== Installation of Advanced Rest Client
 .. Go to ** https://install.advancedrestclient.com/#/install **
@@ -369,6 +419,9 @@ image::ARC5.png[AR]
 .. You can mention the required [navy]#** Method **# and [navy]#** Request URL **# 
 +
 image::ARC6.png[AR]
+
+.. [navy]#**Advanced Rest Client 12.1.4 **# is installed!
+
 
 == Certificates Required for Development(For using the framework within Anthem)
 
