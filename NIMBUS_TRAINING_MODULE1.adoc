@@ -195,7 +195,7 @@ image::MDBB3.png[M]
 
 -----------------------------------
 +
-image::MDBB4.png[M]
+image::MDBB7.png[M]
 
 .. [navy]#**MongoDB v4.0.2 **# is installed!
 
