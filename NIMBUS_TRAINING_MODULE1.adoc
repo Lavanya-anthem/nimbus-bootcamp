@@ -28,7 +28,7 @@ Programmers who needs to do the initial development enviornment set up to work w
 
 === Technical Pre-requisites
 
-* Good Understanding of Java Programming
+ Good Understanding of Java Programming
 
 
 === Installables
@@ -63,19 +63,30 @@ NOTE: Homebrew (defintion from wikipedia): A free and open-source software packa
 ..	Go to [blue]#** https://brew.sh/ **#
 +
 image::Homebrew_install.png[HB]
-
-.. Open Terminal
-.. Paste the below script in your terminal
+.. Copy the script from the website
++
+image::H1.png[H1]
+.. Open Terminal 
+** Press [green]#**command+spacebar**# to open [green]#**Spotlight Search**#. 
++
+image::T1.png[T1]
+** Type [navy]#**Terminal**# 
++
+image::T2.png[T2]
+** Terminal will be opened
++
+image::T3.png[T3]
+.. Paste the below script in your terminal and press [green]#**Enter**#
 +
 [subs="quotes"]
 -----------------------------------
 [navy]#** /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" **#
 ----------------------------------- 
 
-.. Terminal will prompt for your domain password. Enter the password to begin the installation
+.. Terminal will prompt for your password. Enter the password to begin the installation
 +
 image::HMBB1.png[HB]
-..  Once installed, let us check the version by running the following brew formula  on your terminal
+..  Once installed, let us check the version of [navy]#** Homebrew **#  by running the following brew formula  on your terminal
 +
 [subs="quotes"]
 -----------------------------------
@@ -87,17 +98,36 @@ image::HMBB2.png[HBO]
 .. [navy]#**Homebrew **# is installed!
 
 ==== Installation of JDK
-..	Run the following brew formula in your terminal
+..	Run the following brew formula in your terminal in the mentioned order
 +
 [subs="quotes"]
 -----------------------------------
 [navy]#**$ brew update
+**#
+
+-----------------------------------
++
+image::H3.png[H3]
++
+[subs="quotes"]
+-----------------------------------
+[navy]#**
 $ brew tap caskroom/versions
-$ brew cask install java8**#
+**#
+
+-----------------------------------
++
+image::H4.png[H4]
++
+[subs="quotes"]
+-----------------------------------
+[navy]#**$ brew cask install java8
+**#
 
 -----------------------------------
 
-.. Terminal will prompt for your domain password. Enter the password to begin the installation
+
+.. If the terminal will prompt for your password, enter the password to begin the installation
 +
 image::JDKK1.png[JV]
 
@@ -121,7 +151,8 @@ image::JDKK2.png[JV]
 -----------------------------------
 [navy]#** $ brew install maven **#
 -----------------------------------
-
++
+image::M1.png[M1]
 ..  Once installed, let us check the version by running the following brew formula on your terminal        
 +
 [subs="quotes"]
@@ -143,7 +174,8 @@ image::MAVV.png[JV]
 [navy]#** $ brew install git **#
 -----------------------------------
 +
-image::GIT1.png[JV]
+image::Gi2.png[JV]
+
 .. Once installed, let us check the installation by running the following brew formula on your terminal
 +
 [subs="quotes"]
@@ -155,65 +187,57 @@ image::GITT2.png[GV]
 
 .. [navy]#**Git 2.14.3**# is installed!
 
-
-
-==== Installation of MongoDB
-..	Run the following brew formula in your terminal
-+
-[subs="quotes"]
------------------------------------
-[navy]#**
-$ brew install mongodb **#
-
------------------------------------
-+
-image::MDB.png[JV]
-
-..  Once installed, let us check the version by running the following brew formula on your terminal
-+
-[subs="quotes"]
------------------------------------
-[navy]#** $ mongo -version **#
-
------------------------------------
-+
-image::MDBB2.png[M]
-.. Let us start the mongodb by running the following brew formula 
-+
-[subs="quotes"]
------------------------------------
-[navy]#** $ brew services start mongodb **#
-
------------------------------------
-+
-image::MDBB3.png[M]
-.. Let us check if the mongodb is running by running the following brew formula
-+
-[subs="quotes"]
------------------------------------
-[navy]#** $ brew services list **#
-
------------------------------------
-+
-image::MDBB7.png[M]
-
-.. [navy]#**MongoDB v4.0.2 **# is installed!
-
-
 ==== Installation of Spring Tool Suite 
 
-..	Run the following brew formulae on your terminal 
+..	Run the following brew formula on your terminal in the mentioned order	
+
 +
 [subs="quotes"]
 -----------------------------------
 [navy]#**$ brew update
+**#
+-----------------------------------
++
+image::SS1.png[GV]
++
+[subs="quotes"]
+-----------------------------------
+[navy]#**
 $ brew tap caskroom/cask
-$ brew cask search sts
+**#
+-----------------------------------
++
+image::SS2.png[GV]
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** 
+$ brew  search sts
+**#
+-----------------------------------
++
+image::SS3.png[GV]
++
+[subs="quotes"]
+-----------------------------------
+[navy]#**
 $ brew cask info sts
+**#
+-----------------------------------
++
+image::SS5.png[GV]
++
+[subs="quotes"]
+-----------------------------------
+[navy]#**
 $ brew cask install sts**#
 -----------------------------------
 +
+image::SS4.png[GV]
+.. [navy]#**STS**# is installed
++
 image::STSS11.png[GV]
+
 .. [navy]#**STS**# will be installed in your [blue]#**"/Applications" **# folder
 +
 image::STS22.png[GV]
@@ -290,7 +314,11 @@ image::LM7.png[LK1]
 .. [navy]#** lombok **# will be installed successfully, Click [navy]#** Quit Installer **#
 +
 image::LM8.png[LK1]
-.. We can check the Lombok installation by clicking [navy]#**Spring Tool Suit->About **#
+.. We can check the [navy]#**Lombok **# installation by clicking [navy]#**Spring Tool Suit->About **#
++
+image::LM1a.png[LP]
++
+.. We can view the version of [navy]#**Lombok **#
 +
 image::LM9.png[LK1]
 
@@ -375,11 +403,11 @@ image::R2.png[R2]
 +
 image::R3.png[R3]
 
-.. Open the downloaded dmg file . Drag and drop Robo 3T to [blue]#** "\Applications" **# folder 
+.. Open the downloaded dmg file . Drag and drop [navy]#**Robo 3T**# to [blue]#** "\Applications" **# folder 
 +
 image::R4.png[R4]
 
-.. Open Robo 3T and accept the user agreement. Click [navy]#**Next**#
+.. Open [navy]#**Robo 3T**#  and accept the user agreement. Click [navy]#**Next**#
 +
 image::R5.png[R5]
 
@@ -474,6 +502,49 @@ image::dckr4.png[DV4,300]
 ..	Check the version from your terminal 
 +
 image::dckr5.png[DV5]
+
+
+==== Installation of MongoDB
+..	Run the following brew formula in your terminal
++
+[subs="quotes"]
+-----------------------------------
+[navy]#**
+$ brew install mongodb **#
+
+-----------------------------------
++
+image::MDB.png[JV]
+
+..  Once installed, let us check the version by running the following brew formula on your terminal
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ mongo -version **#
+
+-----------------------------------
++
+image::MDBB2.png[M]
+.. Let us start the mongodb by running the following brew formula 
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ brew services start mongodb **#
+
+-----------------------------------
++
+image::MDBB3.png[M]
+.. Let us check if the mongodb is running by running the following brew formula
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ brew services list **#
+
+-----------------------------------
++
+image::MDBB7.png[M]
+
+.. [navy]#**MongoDB v4.0.2 **# is installed!
 
 ==== Working with MongoDb through Docker
 .. Go to :

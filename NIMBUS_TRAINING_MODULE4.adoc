@@ -1,0 +1,268 @@
+
+= NIMBUS FRAMEWORK BOOTCAMP TRAINING- MODULE 4
+:docinfo: shared,private-head
+:revnumber: v1.1
+:revdate: 8.10.2018
+:revremark: First draft
+:source-highlighter: prettify
+:sectnums:                                                          
+:toc: left                                                             
+:toclevels: 4                                                       
+:toc-title: Table of Contents                                              
+:experimental:                                                      
+:description: NIMBUS AsciiDoc document 4                            
+:keywords: AsciiDoc  
+
+[.text-center]
+[big navy]*MODULE 4*
+[.text-center]
+[big navy]*AN INSIGHT TO PETCLININC APPLICATION*
+
+=== Introduction
+
+This module helps you to create simple examples using NIMBUS framework
+
+=== Audience
+
+Programmers who have successfully set up the development environment for NIMBUS framework.
+
+=== Pre-requisites
+
+The developers are expected to have all the softwares mentioned below installed on their system
+
+[cols="2",options="header"]
+|=========================================================
+|Application Name | Version 
+
+|Java	|1.8.0_171 
+|Maven	 |3.5.3
+|Lombok	|1.18.2
+|STS	|3.9.5 RELEASE 
+|VS Code	|1.14.2 
+|Robo 3T	|1.2.1
+|Chrome	|Version 63.0.3239.108 (Official Build) (64-bit)
+|Advanced Rest Client	|arc-12.1.4
+
+
+|=========================================================
+
+NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.0.M1-SNAPSHOT**.
+      The versions are subjected to change.
+
+
+
+=== Cloning Nimbus Framework Code
+
+take the latest nimbus odss code from github:
+
+
+.  Go to 
+[blue]#**https://github.com/openanthem/nimbus-core**# and select Branch as [navy]#**1.1.0.M2**#.
++
+image::CLL1.png[cl1]
+
+.	Click the [navy]#** Clone or Download **# button and copy the hyperlink
+[blue]#**
+https://github.com/openanthem/nimbus-core.git**#
++
+image::CN1.png[cl1]
+
+.	Open Terminal
+.	Create a new folder named [navy]#**git**# in your cd /Users/AX12345
++
+image::C1.png[c1]
+
+.	Navigate to the folder and run the following command
++
+[subs="quotes"]
+-----------------------------------
+**git clone -b 1.1.0.M2 
+https://github.com/openanthem/nimbus-core.git
+** 
+----------------------------------- 
++
+image::C2.png[c1]
+
+. List the items in [navy]#**git**# folder
++
+image::C3.png[c1]
+. Navigate to [navy]#**nimbus-core**# folder and build the projects by typing the command
++
+[subs="quotes"]
+-----------------------------------
+**sh build-projects.sh ** 
+-----------------------------------
++
+image::C4.png[c1]
+
+. We are done cloning the framework code in our local folder
+
+=== Cloning Pet-Clinic Code
+
+. Login to: [blue]#**https://bitbucket.anthem.com/projects/NIM/repos/petclinic-training/browse?at=refs%2Fheads%2Fdevelop **#
++
+image::P11.png[P11]
+.	Click [navy]#**clone **# and copy the hyperlink
+[blue]#** https://AF84298@bitbucket.anthem.com/scm/nim/petclinic-training.git **#
++
+image::P12.png[P12]
+.	Open Terminal 
+.	Navigate to the git folder path and run the following command
++
+[subs="quotes"]
+-----------------------------------
+*git clone -b develop https://AF84298@bitbucket.anthem.com/scm/nim/petclinic-training.git*
+-----------------------------------
++
+image::P13.png[P13]
+. Terminal displays successful message
+. Make sure your mongo db is running
+. Import [navy]#**com.anthem.client.extension.petclinic**# and [navy]#**petclinic-web**# in [navy]#**STS**# 
++
+image::PT2.png[PT2]
+. Build the project
++
+image::PT3.png[PT4]
+. Run the application
++
+image::PT5.png[PT5]
+. Select the application as 
++
+image::PT6.png[PT6]
+. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
++
+image::PT7.png[PT7]
+
+== Playing around with Pet-Clinic App:
+
+=== Adding a new Owner:
+. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
++
+image::O1.png[O1]
+.. Click Owners
++
+image::O2.png[O2]
+.. You will be redirected to [green]#**Owners**# page
++
+image::O3.png[O3]
+.. Click [green]#**Add Owner**#
++
+image::O3a.png[O3a]
+.. You will be redirected to [green]#**Add Owners**# page
++
+image::O4.png[O4]
+.. Enter the details
++
+image::O5.png[O5]
+.. Click [green]#**Submit**#
++
+image::O5a.png[O5a]
+.. You can view the details in [green]#**Owners**# page
++
+image::O6.png[O6]
+
+=== Adding a new column:
+. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
++
+image::O1.png[O1]
+. Click [green]#**Owners**#
++
+image::O2.png[O2]
+. You will be re-directed to Owners page. You can view the Owner details with  4 coloumns [green]#**First Name, Last Name, Owner City, Telephone**# . Let us try to display one more column [green]#**Zip Code**# in this page. Copy [green]#**vpOwner**# string from the url, as we are trying to search for the page that contains the column names to be displayed.
++
+image::C11a.png[C11]
+.  Goto [navy]#**STS**#, Click on [navy]#**Search--> File**#
++
+image::C12.png[C11]
+. In [navy]#**File Search**# tab, type [green]#**vpOwner**# in [navy]#**Containing text**# textbox. Click [navy]#**Search**#
++
+image::C13.png[C11]
+. You can see a list of files that contains [green]#**vpOwner**#
++
+image::C14.png[C11]
+. There are 2 classes where we have [green]#**vpOwner**# : [navy]#**VROwner**# and [navy]#**VROwnerLanding.java**#
++
+image::C15.png[C11]
+. Framework uses the convention of [green]#**'VP'**# to denote  a page.Let us open the class [navy]#**VROwnerLanding.java **# as we have [green]#**'VP'**#  in this class.
++
+image::C16.png[C11]
+. We could see that [green]#**owners**# are of type [green]#**OwnerLineItem**#. 
++
+image::C17.png[C11]
+. Find [navy]#**OwnerLineItem.java **# inside [navy]#** com.anthem.client.extension.petclinic->com.atlas.client.extension.petclininc.view->OwnerLineItem.java **#
++
+image::C18.png[C11]
+. Open [navy]#**OwnerLineItem.java **# . You can see the columns names [green]#**First Name, Last Name, Owner City, Telephone**# which are displayed in the Owners page.
++
+image::C19.png[C11]
+.  Lets add a piece of code to display [green]#** Zipcode **# as well
++
+image::C2a.png[C2a]
+
+. In [navy]#**OwnerLineItem.java **#  , you can see that this class is mapped to [navy]#**Owner.class**#
++
+image::C2b.png[C11]
+. Find [navy]#**Owner.java **# inside [navy]#** com.anthem.client.extension.petclinic->com.atlas.client.extension.petclininc.core->Owner.java **#
++
+image::C2c.png[C11]
+. Since [navy]#**Owner.java **# is a core class , you can see the declaration/representation of all columns in the database here.
++
+image::C22.png[C11]
+
+
+. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# . Click [green]#**Owners**# and then click [green]#**Add Owner**#
++
+image::C23.png[C11]
+
+. Enter the value for [green]#**Zipcode **# 
+
++
+image::C24.png[C11]
+
+. Enter the details and click [green]#**Submit**#
+
++
+image::C25.png[C11]
+
+. You can see the column [green]#**Zipcode**# and its value displayed
+
++
+image::C26.png[C11]
+
+=== Adding a action 'delete' for each owner:
+. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
++
+image::CMN1.png[O1]
+. Click [green]#**Owners**#
++
+image::CMN2.png[O1]
+. Click the action menu(arrows on the very right most end of each row). You can see [green]#**Edit**# and [green]#**Owner Info**#
++
+image::CMN3.png[03]
+. As in previous example,let us open the class [navy]#**VROwnerLanding.java **# 
++
+image::C16.png[C11]
+. We could see that the instance [green]#**owners**# are of type [green]#**OwnerLineItem**#
++
+image::C17.png[C11]
+. Find [navy]#**OwnerLineItem.java **# inside [navy]#** com.anthem.client.extension.petclinic->com.atlas.client.extension.petclininc.view->OwnerLineItem.java **#
++
+image::C18.png[C11]
+. Open [navy]#**OwnerLineItem.java **# . You can see the lines of code for actions [green]#**'Edit' **# and [green]#** 'Owner Info' **#
++
+image::C2d.png[C11]
+. Let us add a piece of code to perform the action [green]#** 'Delete' **# in [navy]#**OwnerLineItem.java **# 
++
+image::C2e.png[C11]
+. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
++
+image::CMN1.png[O1]
+. Click [green]#**Owners**#
++
+image::CMN2.png[O1]
+. Click the action menu. You can see [green]#**Edit**# , [green]#**Owner Info**# and [green]#** Delete**#
++
+image::C2f.png[03]
+. Click the [green]#** Delete**#. You can see that the first row is deleted.
++
+image::C2g.png[03]
