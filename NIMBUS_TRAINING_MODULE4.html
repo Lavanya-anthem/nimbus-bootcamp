@@ -1182,6 +1182,95 @@ https://github.com/openanthem/nimbus-core.git
 <img src="C2a.png" alt="C2a">
 </div>
 </div>
+<div class="listingblock">
+<div class="title"><strong>OwnerLineItem.java</strong></div>
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">package com.atlas.client.extension.petclinic.view;
+
+import java.util.List;
+
+import com.antheminc.oss.nimbus.domain.defn.Execution.Config;
+import com.antheminc.oss.nimbus.domain.defn.MapsTo;
+import com.antheminc.oss.nimbus.domain.defn.MapsTo.Path;
+import com.antheminc.oss.nimbus.domain.defn.Model;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.Grid;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.GridColumn;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.GridRowBody;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.Link;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.LinkMenu;
+import com.antheminc.oss.nimbus.domain.defn.extension.Content.Label;
+import com.atlas.client.extension.petclinic.core.Owner;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@MapsTo.Type(Owner.class)
+@Getter @Setter
+public class OwnerLineItem {
+
+	@GridColumn(hidden=true)
+    @Path
+    private Long id;
+
+    @Label("First Name")
+    @GridColumn
+    @Path
+    private String firstName;
+
+    @GridRowBody
+    private ExpandedRowContent expandedRowContent;
+
+    @Model @Getter @Setter
+    public static class ExpandedRowContent {
+
+    	@Label("Pets")
+    	@Grid(onLoad = true)
+    	@Path(linked = false)
+		@Config(url="&lt;!#this!&gt;.m/_process?fn=_set&amp;url=/p/pet/_search?fn=example")
+        private List&lt;PetLineItemOwnerLanding&gt; pets;
+    }
+
+    @Label("Last Name")
+    @GridColumn
+    @Path
+    private String lastName;
+
+    @Label("Owner City")
+    @GridColumn
+    @Path("city")
+    private String ownerCity;
+
+    @Label("Telephone")
+    @GridColumn
+    @Path
+    private String telephone;
+
+   @Label("ZipCode")
+    @GridColumn
+    @Path
+    private String zip;
+
+    @LinkMenu
+    private VLMCaseItemLinks vlmCaseItemLinks;
+
+    @Model @Getter @Setter
+    public static class VLMCaseItemLinks {
+
+    	@Label("Edit")
+        @Link(imgSrc="edit.png")
+    	@Config(url="/p/ownerview:&lt;!/../id!&gt;/_get")
+    	private String edit;
+
+    	@Label("Owner Info")
+        @Link(imgSrc="task.svg")
+    	@Config(url="/p/ownerview:&lt;!/../id!&gt;/_get")
+        @Config(url="/p/ownerview:&lt;!/../id!&gt;/_nav?pageId=vpOwnerInfo")
+        private String ownerInfo;
+
+        }
+        }</code></pre>
+</div>
+</div>
 </li>
 <li>
 <p>In <span class="navy"><strong>OwnerLineItem.java </strong></span>  , you can see that this class is mapped to <span class="navy"><strong>Owner.class</strong></span></p>
@@ -1309,6 +1398,107 @@ https://github.com/openanthem/nimbus-core.git
 <img src="C2e.png" alt="C11">
 </div>
 </div>
+<div class="listingblock">
+<div class="title"><strong>OwnerLineItem.java</strong></div>
+<div class="content">
+<pre class="prettyprint highlight"><code class="language-java" data-lang="java">package com.atlas.client.extension.petclinic.view;
+
+import java.util.List;
+
+import com.antheminc.oss.nimbus.domain.defn.Execution.Config;
+import com.antheminc.oss.nimbus.domain.defn.MapsTo;
+import com.antheminc.oss.nimbus.domain.defn.MapsTo.Path;
+import com.antheminc.oss.nimbus.domain.defn.Model;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.Grid;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.GridColumn;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.GridRowBody;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.Link;
+import com.antheminc.oss.nimbus.domain.defn.ViewConfig.LinkMenu;
+import com.antheminc.oss.nimbus.domain.defn.extension.Content.Label;
+import com.atlas.client.extension.petclinic.core.Owner;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@MapsTo.Type(Owner.class)
+@Getter @Setter
+public class OwnerLineItem {
+
+	@GridColumn(hidden=true)
+    @Path
+    private Long id;
+
+    @Label("First Name")
+    @GridColumn
+    @Path
+    private String firstName;
+
+    @GridRowBody
+    private ExpandedRowContent expandedRowContent;
+
+    @Model @Getter @Setter
+    public static class ExpandedRowContent {
+
+    	@Label("Pets")
+    	@Grid(onLoad = true)
+    	@Path(linked = false)
+		@Config(url="&lt;!#this!&gt;.m/_process?fn=_set&amp;url=/p/pet/_search?fn=example")
+        private List&lt;PetLineItemOwnerLanding&gt; pets;
+    }
+
+    @Label("Last Name")
+    @GridColumn
+    @Path
+    private String lastName;
+
+    @Label("Owner City")
+    @GridColumn
+    @Path("city")
+    private String ownerCity;
+
+    @Label("Telephone")
+    @GridColumn
+    @Path
+    private String telephone;
+
+    @Label("ZipCode")
+    @GridColumn
+    @Path
+    private String zip;
+
+    @LinkMenu
+    private VLMCaseItemLinks vlmCaseItemLinks;
+
+    @Model @Getter @Setter
+    public static class VLMCaseItemLinks {
+
+    	@Label("Edit")
+        @Link(imgSrc="edit.png")
+    	@Config(url="/p/ownerview:&lt;!/../id!&gt;/_get")
+    	private String edit;
+
+    	@Label("Owner Info")
+        @Link(imgSrc="task.svg")
+    	@Config(url="/p/ownerview:&lt;!/../id!&gt;/_get")
+        @Config(url="/p/ownerview:&lt;!/../id!&gt;/_nav?pageId=vpOwnerInfo")
+        private String ownerInfo;
+
+
+    	@Label("Delete")
+        @Link(imgSrc="task.svg")
+
+    	// Delete the record from the database
+    	@Config(url="/p/ownerview:&lt;!/../id!&gt;/_delete")
+
+    	/* This line will execute the configuration associated with owners so that it will run the fetch query against the database
+    	and show the updated result */
+        @Config(url="&lt;!#this!&gt;/../../../../owners/_get")
+
+        private String delete;
+    }
+}</code></pre>
+</div>
+</div>
 </li>
 <li>
 <p>Launch the app by visiting <span class="blue"><strong> <a href="http://localhost:8082/petclinic/login" class="bare">http://localhost:8082/petclinic/login</a> </strong></span></p>
@@ -1351,7 +1541,7 @@ https://github.com/openanthem/nimbus-core.git
 <div id="footer">
 <div id="footer-text">
 Version v1.1<br>
-Last updated 2018-10-05 13:48:54 EDT
+Last updated 2018-10-09 15:11:10 EDT
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
