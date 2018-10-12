@@ -861,7 +861,7 @@ p.tableblock.header { color: #6d6e71; }
 <div class="ulist">
 <ul>
 <li>
-<p>This framework enables us to create Low-code configuration based applications. Config explains how to define the entity and how the entity is modified using <strong>rules</strong> and <strong>workflows</strong></p>
+<p>This framework enables us to create Low-code configuration-based applications. Config explains how to define the entity and how the entity is modified using <strong>rules</strong> and <strong>workflows</strong></p>
 </li>
 <li>
 <p>Once we have the domain model, we can define the configuration for the view, workflow and the rules</p>
@@ -872,7 +872,7 @@ p.tableblock.header { color: #6d6e71; }
 <p><strong>Rules Config:</strong> Defines rules that act on the provider entity</p>
 </div>
 <div class="paragraph">
-<p><strong>Workflow Config:</strong> Defines worflows that act on provider entity</p>
+<p><strong>Workflow Config:</strong> Defines workflows that act on provider entity</p>
 </div>
 </li>
 </ul>
@@ -884,7 +884,7 @@ p.tableblock.header { color: #6d6e71; }
 <p>The value of each entity and its corresponding attributes is referred to as state in the framework.</p>
 </div>
 <div class="paragraph">
-<p>Ex: Consider a patient portal. Every patient have a case associated with him/her in the system.</p>
+<p>Ex: Consider a patient portal. Every patient has a case associated with him/her in the system.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -893,7 +893,7 @@ p.tableblock.header { color: #6d6e71; }
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Persisitence:</strong> Persistance is done by storing the state in the database</p>
+<p><strong>Persistence:</strong> Persistence is done by storing the state in the database</p>
 </li>
 <li>
 <p><strong>Caching:</strong> Caching is done to improve the performance</p>
@@ -917,7 +917,7 @@ p.tableblock.header { color: #6d6e71; }
 </div>
 </li>
 <li>
-<p><strong>Audit:</strong> An entitiy state&#8217;s audit provides the history of changes that happened on an entity attribute when enabled. Changes may include details like who changed the state of an Entity or when did they change the state etc.</p>
+<p><strong>Audit:</strong> An entity state&#8217;s audit provides the history of changes that happened on an entity attribute when enabled. Changes may include details like who changed the state of an Entity or when did they change the state etc.</p>
 <div class="paragraph">
 <p>Example: When was the value of patient&#8217;s case status changed to 'Approved' and by whom.</p>
 </div>
@@ -931,7 +931,7 @@ p.tableblock.header { color: #6d6e71; }
 </li>
 <li>
 <p>Example:
-Consider we have an application which has 5 steps to execute. On day 1, you were able to complete the first 3 steps with the provided user data. On day 2 ,you have to execute from step 4. We along with our business process should know from where should we conitue. This information is got from the saved state till step 3.This is called as the business process state and persisting the state .</p>
+Consider we have an application which has 5 steps to execute. On day 1, you were able to complete the first 3 steps with the provided user data. On day 2 ,you have to execute from step 4. We along with our business process should know from where should we continue. This information is got from the saved state till step 3.This is called as the business process state and persisting the state .</p>
 </li>
 </ul>
 </div>
@@ -950,7 +950,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>Similar to the traditional method calls for button click to do some business logic</p>
 </li>
 <li>
-<p>A standardized the process of writing instructions in way that is understood by the framweork and acts on the  domain</p>
+<p>A standardized the process of writing instructions in way that is understood by the framework and acts on the  domain</p>
 </li>
 </ul>
 </div>
@@ -963,7 +963,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>Specifies the version of the Domain</p>
 </li>
 <li>
-<p>There could be multilple versions for a Domain.</p>
+<p>There could be multiple versions for a Domain.</p>
 </li>
 <li>
 <p>Creates and manages multiple releases of a Domain</p>
@@ -971,7 +971,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 </ul>
 </div>
 <div class="paragraph">
-<p>Example: Consider we have a first release with a version 1.0 in production. Now  if we make some additional changes, we may need to have a new release with a different version say, 1.1 which is backward compatable.</p>
+<p>Example: Consider we have a first release with a version 1.0 in production. Now  if we make some additional changes, we may need to have a new release with a different version say, 1.1 which is backward compatible.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1014,12 +1014,12 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <div class="ulist">
 <ul>
 <li>
-<p>The pure defintion of a provider is given by core config.</p>
+<p>The pure definition of a provider is given by core config.</p>
 </li>
 <li>
-<p>In the form where we are entering the data, we may capture first name, lastname and tax id of the provider and not everything.</p>
+<p>In the form where we are entering the data, we may capture first name, last name and tax id of the provider and not everything.</p>
 <div class="paragraph">
-<p>Example: Core Config gives Name, Address and TaxId etc of your provider domain.</p>
+<p>Example: Core Config gives Name, Address and TaxId etc. of your provider domain.</p>
 </div>
 </li>
 </ul>
@@ -1039,7 +1039,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>The View Config maps to the Core Config.</p>
 </li>
 <li>
-<p>Based on one core definition we can create mulitple view definitions. This is because the provider being used would be different in different places but the definition of the provider does not change</p>
+<p>Based on one core definition we can create multiple view definitions. This is because the provider being used would be different in different places but the definition of the provider does not change</p>
 </li>
 <li>
 <p>There are multiple ways to view providers as well. This can either be requesting providers or servicing providers</p>
@@ -1047,7 +1047,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 </ul>
 </div>
 <div class="paragraph">
-<p>Thus we have seen the definiton of the provider in terms of core and view</p>
+<p>Thus, we have seen the definition of the provider in terms of core and view</p>
 </div>
 </div>
 <div class="sect4">
@@ -1061,17 +1061,17 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>When an application is running, the user may enter data. We have a state when we start capturing data about the provider.</p>
 </li>
 <li>
-<p>As you know, we have core and view for configuration. Likewise we have core and view for state as well.</p>
+<p>As you know, we have core and view for configuration. Likewise, we have core and view for state as well.</p>
 </li>
 <li>
 <p>Example:</p>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>In our application, consider we open a provider-finder page and search for a provider. In the result page you would like to see only relevant details like the first page u may want to see only the provider name, address and speciality.This is one view of the provider.</p>
+<p>In our application, consider we open a provider-finder page and search for a provider. In the result page you would like to see only relevant details like the first page u may want to see only the provider name, address and specialty.This is one view of the provider.</p>
 </li>
 <li>
-<p>Consider we have a button 'View Details' in the same provider-finder page. Once you click that button, we can see more provider details say affiliations, visting office locations etc. This is an other view for the same provider.</p>
+<p>Consider we have a button 'View Details' in the same provider-finder page. Once you click that button, we can see more provider details say affiliations, visiting office locations etc. This is another view for the same provider.</p>
 </li>
 </ol>
 </div>
@@ -1083,7 +1083,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>We can have one or more <strong>View States</strong> depending on what we are displaying to the user.</p>
 </li>
 <li>
-<p>So its the same core state of the provider with multiple view states.</p>
+<p>So, it&#8217;s the same core state of the provider with multiple view states.</p>
 </li>
 <li>
 <p>This is the main idea of the entire framework.</p>
@@ -1097,13 +1097,13 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <div class="ulist">
 <ul>
 <li>
-<p>This block explains the class heirchy diagram.</p>
+<p>This block explains the class hierarchy diagram.</p>
 </li>
 <li>
-<p>This is maintainted internally by <strong>Model Config, Param Config, ParamType field, Nested and Collection</strong>.</p>
+<p>This is maintained internally by <strong>Model Config, Param Config, ParamType field, Nested and Collection</strong>.</p>
 </li>
 <li>
-<p>Consider our provider as <strong>Model</strong>. Under provider we can have multiple <strong>parameters</strong> like First Name, Last Name, Address etc. The parameters can be of type <strong>Simple fields</strong>(First Name, Last Name) or <strong>Nested</strong>(Address). The Nested type can also be a <strong>Collection</strong> where we can have phone numbers, one or more addresses. Address is a type Collection which is of type Nested.</p>
+<p>Consider our provider as <strong>Model</strong>. Under provider we can have multiple <strong>parameters</strong> like First Name, Last Name, Address etc. The parameters can be of type <strong>Simple fields</strong>(First Name, Last Name) or <strong>Nested</strong>(Address). The Nested type can also be a <strong>Collection</strong>  where we can have phone numbers, one or more addresses. Address is a type Collection which is of type Nested.</p>
 </li>
 </ul>
 </div>
@@ -1113,7 +1113,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <h2 id="_state_action_model">6. State Action Model</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This is the class diagram of how things are maintained within the framwework.</p>
+<p>This is the class diagram of how things are maintained within the framework.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -1169,10 +1169,10 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>We know that '<strong>RxJS</strong> code involves making subscriptions to observables'</p>
 </li>
 <li>
-<p><strong>RxJS</strong> constantly subscribes to events and whenever it receives a subscrption or an event change, it will notify the front end components and they will update themeselves</p>
+<p><strong>RxJS</strong> constantly subscribes to events and whenever it receives a subscription or an event change, it will notify the front-end components and they will update themselves</p>
 </li>
 <li>
-<p>Whenever an event happens,<strong>RxJS</strong> comes to the event handler which listens to all the changes.</p>
+<p>Whenever an event happens, <strong>RxJS</strong> comes to the event handler which listens to all the changes.</p>
 </li>
 <li>
 <p>As soon as <strong>RxJS</strong> get an event, it will update <strong>View State</strong></p>
@@ -1187,7 +1187,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>The <strong>View State</strong> in the server maintains the View State in frontend</p>
 </li>
 <li>
-<p>Server acts as the referrence</p>
+<p>Server acts as the reference</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1251,11 +1251,11 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>Core UI is Angular(<strong>Rendering Logic</strong>) with Typescript(<strong> View Components</strong>)</p>
 </li>
 <li>
-<p><strong>View Component Library</strong> has mulitple view components</p>
+<p><strong>View Component Library</strong> has multiple view components</p>
 <div class="ulist">
 <ul>
 <li>
-<p>Example: Form, Grid, Tile, Textbox, Accordion etc</p>
+<p>Example: Form, Grid, Tile, Textbox, Accordion etc.</p>
 </li>
 </ul>
 </div>
@@ -1272,15 +1272,15 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p><strong>Workflow &amp; Rules:</strong></p>
 </div>
 <div class="paragraph">
-<p>Workflows and rules changes the state.</p>
+<p>Workflows and rules change the state.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Whenever an user action happens like a button click, it can trigger a work flow or a rule</p>
+<p>Whenever a user-action happens like a button click, it can trigger a work flow or a rule</p>
 </li>
 <li>
-<p>When these workflows and rule execute,the state changes.</p>
+<p>When these workflows and rule execute, the state changes.</p>
 </li>
 <li>
 <p>Example:</p>
@@ -1290,7 +1290,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>Consider a rule that if the provider code is 1234, the status of case should be approved.</p>
 </li>
 <li>
-<p>So if an user entered 1234 as the provider code, the above rule will be executed and the status of the case would be set as approved.</p>
+<p>So, if a user entered 1234 as the provider code, the above rule will be executed and the status of the case would be set as approved.</p>
 </li>
 <li>
 <p>Here the state is changed based on a rule.</p>
@@ -1304,7 +1304,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p><strong>Command Gateway:</strong></p>
 </div>
 <div class="paragraph">
-<p>Command Gateways are mutliple actions that come from the frontend.</p>
+<p>Command Gateways are multiple actions that come from the frontend.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1316,7 +1316,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>Consider a basic UI operation or a CRUD operation.</p>
 </li>
 <li>
-<p>We can add a provider, delete a provider, update a provider or view a provider. That is we can create, read, update and delete a provider</p>
+<p>We can add a provider, delete a provider, update a provider or view a provider. That is, we can create, read, update and delete a provider</p>
 </li>
 <li>
 <p>Any of these actions can happen to entities</p>
@@ -1337,7 +1337,7 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>We have our own <strong>Command Query Domain Specific Language</strong> to serve the purpose</p>
 </li>
 <li>
-<p><strong>Command Query Domain Specific Language:</strong> The  <strong>Command</strong>  is  the  instruction  that  the  Framework  understands  to  execute  and  come  back  with an output. It is similar to writing the traditional method calls for an action (such as a button click)to perform business logic, but attempts to introduce a standardized process via the use of a domainspecific language (DSL) that the Framework can interpret. This is called the <strong>Command Query DSL</strong>.The  Command  Query  DSL  is  represented  in  URL  format  (commonly  referred  to  as  the  CommandURL) and is based on Query DSL.</p>
+<p><strong>Command Query Domain Specific Language:</strong> The  <strong>Command</strong>  is  the  instruction  that  the  Framework  understands  to  execute  and  come  back  with an output. It is similar to writing the traditional method calls for an action (such as a button click)to perform business logic, but attempts to introduce a standardized process via the use of a domain specific language (DSL) that the Framework can interpret. This is called the <strong>Command Query DSL</strong>.The  Command  Query  DSL  is  represented  in  URL  format  (commonly  referred  to  as  the  Command URL) and is based on Query DSL.</p>
 </li>
 </ul>
 </div>
@@ -1354,10 +1354,10 @@ Consider we have an application which has 5 steps to execute. On day 1, you were
 <p>Create: Create new provider</p>
 </li>
 <li>
-<p>Read: To retrive the data</p>
+<p>Read: To retrieve the data</p>
 </li>
 <li>
-<p>Update:To update the data</p>
+<p>Update: To update the data</p>
 </li>
 <li>
 <p>Delete: To delete the data
@@ -1404,7 +1404,7 @@ image::RF3.png[RF3]</p>
 <div id="footer">
 <div id="footer-text">
 Version v1.1<br>
-Last updated 2018-10-12 15:35:29 EDT
+Last updated 2018-10-12 17:11:43 EDT
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">

@@ -53,7 +53,7 @@ NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.0.M2-SN
 === Cloning Nimbus Framework Code
 
 .  Go to 
-[blue]#**https://github.com/openanthem/nimbus-core**# and select Branch as [navy]#**1.1.0.M2**#.
+[blue]#**https://github.com/openanthem/nimbus-core**# and select Branch as [navy]#**1.1.x**#.
 +
 image::CLL1.png[cl1]
 
@@ -71,7 +71,7 @@ image::CN1.png[cl1]
 +
 [subs="quotes"]
 -----------------------------------
-**git clone -b 1.1.0.M2 
+**git clone -b 1.1.x 
 https://github.com/openanthem/nimbus-core.git
 ** 
 ----------------------------------- 
