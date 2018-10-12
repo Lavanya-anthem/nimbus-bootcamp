@@ -1,12 +1,39 @@
-=== Overview
+
+= NIMBUS FRAMEWORK BOOTCAMP TRAINING- MODULE 2
+:docinfo: shared,private-head
+:revnumber: v1.1
+:revdate: 8.10.2018
+:revremark: First draft
+:source-highlighter: prettify
+:sectnums:                                                          
+:toc: left                                                             
+:toclevels: 4                                                       
+:toc-title: Table of Contents                                              
+:experimental:                                                      
+:description: NIMBUS AsciiDoc document                             
+:keywords: AsciiDoc  
+
+[.text-center]
+[big navy]*MODULE 2*
+[.text-center]
+[big navy]*OVERVIEW OF NIMBUS FRAMEWORK*
+
+=== Introduction
+
+This module helps to understand the architecture of NIMBUS framework
+
+=== Audience
+Anyone who needs to understand the architecture of the framework
+
+=== Outline
 
 Nimbus framework is a **Business Process Management tool** which is used to create **scalable** applications easily and quickly
 
 
-image::RFA1.png[RFA,400]
+image::RFA1.png[RFA,600]
 
-* The framework is built using spring boot, spring cloud & Angular and it uses command design pattern internally. 
-* The framework helps to create  **"Low code and open source applications"** 
+* The framework is built using spring boot, spring cloud & Angular and it uses command design pattern. 
+* The framework helps to create  **"Open source applications(using less code)"** 
 * We have the freedom to leverage the framework and build applicaitons easily. It is the ** configuration capability** of the framework which enables us to build different applications.
 * Nimbus framework is **domain agnostic** i.e., the framework does not really care about the type of application we are creating. It can be clinical, financial or something else. 
 * It gives you all development tools for easy and scalable applications. 
@@ -24,7 +51,7 @@ For any application, the first step in the process of building the product is to
 * The Domain model is the core of our framework
 * This framework is based on domain driven development
 * We will define the Domain first and then we will work around it.
-* Domain specifies the Core Provider defintion
+
 
 ==== Config:
 
@@ -39,157 +66,207 @@ For any application, the first step in the process of building the product is to
 
 ==== State:
 
-The value of each entity and its corresponding attributes is referred to as state in the framework. .
+The value of each entity and its corresponding attributes is referred to as state in the framework. 
 
-* *Entity state:* An entity gets a state during runtime depending on the input values from the user. The following actions can happen on the entity state. 
+Ex: Consider a patient portal. Every patient have a case associated with him/her in the system.
+
+* *Entity state:* An entity gets a state during runtime depending on the input values/actions from the user. The following actions can happen on the entity state. 
 +
 ** *Persisitence:* Persistance is done by storing the state in the database
 +
-** *Caching:* Caching is done to improve the performance.
+** *Caching:* Caching is done to improve the performance
 +
-** *Events:* Events occurs based on some actions.
+** *Events:* Events occurs based on some actions
 +
-** *Notifications:* Events trigger notifications.  
+** *Notifications:* Events trigger notifications  
 +
-Example: If the status of a case is 'Approved', an email should be sent to the provider or the corresponding member. 
-
+Example: Consider the status of a patient's case was 'In Progress'. When the status is changed to 'Approved', an email should be sent to the provider or the corresponding member 
 +
-** *Changelog:* Changelog logs the change of the entity's state.
+** *Changelog:* Changelog logs the change of the entity's state
 +
-Example: Previously the case status value was 'In Progess'.Now the value is changed to 'Approved' 
+Example:The value of patient's case status was 'In Progess'.Now the value is changed to 'Approved'. All the changes would be logged. 
 
 * *Audit:* An entitiy state's audit provides the history of changes that happened on an entity attribute when enabled. Changes may include details like who changed the state of an Entity or when did they change the state etc.
-
++
+Example: When was the value of patient's case status changed to 'Approved' and by whom.
 * *Process state:*
-Let us understand this with an example:
-Consider you have an application where in you have 5 steps to execute. As on Day 1, you were able to complete only first 3 steps with the provided user data. As on Day 2 you have to execute from step 4. How do we know the state of the business process?. We need to know from where should we conitue.We have to know how much business process is executed so that we can continue from there.
-So we have to save to save whatever done till Step 3 . This is called as the business process state and persisting the state .
++
+** Saving the state of an entity even after the process has been completed for further processes.
+** Example:
+Consider we have an application which has 5 steps to execute. On day 1, you were able to complete the first 3 steps with the provided user data. On day 2 ,you have to execute from step 4. We along with our business process should know from where should we conitue. This information is got from the saved state till step 3.This is called as the business process state and persisting the state . 
 
-
-=== Command:
-* The instruction that the framework understands to execute and produce an output. 
+==== Command:
+* The instruction that the framework understands to execute and produce an output 
 * Similar to the traditional method calls for button click to do some business logic
 *  A standardized the process of writing instructions in way that is understood by the framweork and acts on the  domain  
 
 
-=== Version:
+==== Version:
 * Specifies the version of the Domain
 * There could be multilple versions for a Domain. 
+* Creates and manages multiple releases of a Domain
 
-example , first release was in to production that is 1.0, say there could be come addoitional changes, a new version came accodmotaing the changes. but if something is already saved with 1.0, then 1.1 should be backward compatable. there should be some version ing that happens. becoz the domain defention can change from releease to other.
+Example: Consider we have a first release with a version 1.0 in production. Now  if we make some additional changes, we may need to have a new release with a different version say, 1.1 which is backward compatable. 
+  
 
-[[[[i need to know how much business process is executed so that i can continue from there. there was an error, then we would know ok this is the place where i need to start over from. so that is the state of the business process itself. and that also needs to be persisted;
-today if my applicaitons have 5 steps, today i can do 2 steps and sign of of the day.tmrw wen i come and start, i should know that i have to start from 3rd step. 
-my business process should also start from 3rd step. what happend upto that point,we have to save. that is the business process state and the persistnce of the state.]]]]
+==== Summary of the thought process:
+Config defines the domain, state tell us the state of the domain at a given instance and commands act on a domain
 
-[we are doing domain driven development.
-menaing we first define our domain and then see what goes around it. 
-so in the centre we have defined domain which the core provider defenition
-
-how do you do thst provider defenition that is the configuration ( on the irght side). How are we defining the provider is configuration.
-
-what goewsn into the condiguration:-> entity config( which is definiting the provider itself), then we define rules that act on the provider entity and we also define worflow that act on provider entity.
-we are doing development with confiration. we are not wirting lots of codes. so this config is defining everythings: that is how the entity is defined and how the entity is modified using rules and workflows.]
-
-State:
-at runtime depending on the values entered by the user, it has a state. now the state has to be audited( who changed it , when did they change it..these are audit information)
-
-enity state: depending on enitty state there are somethings that need to happen. we have to persisit it, meaning  store the state in db, you might have to cache it to improve the performabce. we might have to send notifications or events depending on certain values. for eg, if the case is approved, we might have to send an email to the provider or the member. some event gets trigered and that events can trigger notification.
-changelog:previously value was in inprogess. now its approved. 
-change log and audit are 2 different things.
-change logs says the value changed from this to this.
-audit : who changed / when changed
-
-process state:
-if you are looking at workfflow engines, say there are 5 steps. only first 3 are exectuted becoz we on;y have so much data or user have only entered this much data and the next time the user comes we have to execute form the 4th step.how do i know what is the state of the business process itself. i need to know how much business process is executed so that i can continue from there. there was an error, then we would know ok this is the place where i need to start over from. so that is the state of the business process itself. and that also needs to be persisted;
-today if my applicaitons have 5 steps, today i can do 2 steps and sign of of the day.tmrw wen i come and start, i should know that i have to start from 3rd step. 
-my business process should also start from 3rd step. what happend upto that point,we have to save. that is the business process state and the persistnce of the state.
-
-version:
-there could be multilple versions as we keep changing. example , first release was in to production that is 1.0, say there could be come addoitional changes, a new version came accodmotaing the changes. but if something is already saved with 1.0, then 1.1 should be backward compatable. there should be some version ing that happens. becoz the domain defention can change from releease to other.
-
-there should be some commands which tells what needs to  happen
-so the cmd is command DSL.. simple cmmds are i want to get( read) i want to update, delete or i want to create a new provider.these are different commands. so these commands acts on domain. the config defines the domain, state gives what is the state of the domain at a given isntance.
-
-tjhis is the thought process. 
-how are we acheiving this, we areacheinving this with quad model.the quad model acheives state and config. then we have query dsl which does command aaction behaviour part
-
-
-Quad Model:
+=== Quad Model:
+** The thought process of the framework is achieved with the help of Quad Model
+** Quad model refers to **Core Config**, **View Config**, **Core State**, **View State** 
 
 image::RF7.png[RF1]
-Lets see in detail about top part of the diagram.
-Lets take an example of a Provider to dive into the diagram
-Core Config:
-Core Config gives you the pure definition such as Name, Address and TaxId etc of your provider domain.
+Let us divide the diagram into two blocks.  
 
-Now we have the provider defined. This provider can be used in multiple ways. For eg. i might create a form to enter provider data.
-So when i am entering provider data, you know what from my procedure there could be a requesting provider and there could be a servicing provider.
-Requesting provider is if we go to a primary physician. He will check up and say we need to get this procedure from this speciaist. so go to this orovider who is going to service the request. we have 2 providers. reuqesting providers and servicing providers
+==== Upper Block
 
-In the form where we are entering the data, we might not capture everything. We are not going to enter speciality of the privdierfor eg. we will just enter first name lastname and tax id of the provider
+===== Entity Config 
 
-For view, requirements are different,i need to capture requesting provider and we may need to cpature servicing provider. both are of type provider and io am capturing limited data for those providers like what is needed. that is my view definition.my view maps to the core.i am looking at the core i have a servicing provider of type provider and i am only capturing 4 or 5 attributes. now what have we done. we have one core definition and based on the core definition we are creating mulitple view definiitions.
-becoz the way provider is being used is going to be difeerent in different places. but the definition of the provider doesnot change.
-thats the difference between the core and the view.
-SO far we have seen the deficniton of the provider in terms of core and view.
-Now when the application is running the user is entering data. So once we start capturing data about the provider, now we have a state.
-State is what is the value of the provider object at the given instance or in a asesison. thats the state.
-just like how you have the core and view for the configuration, we will have core and view for the state too.
-example: i could go and get the entire provider definition that has all the details about the provider but when i am displaying it , if i am displaying it to the member, member just needs to know..valid details 
-for example: if you are opeining a porivder finder and you are searching for a provider, the first page u may want to see only the provider name adress and specillaity. thats one view of the provider
-now say we can click on some button called view details, then we can see more details about the provider like affiliations what are all the facilities he goes to, whaat are his locations(more info). this is an other view for the same provider.
-on the top you have the core state, that is the entire state of the provider. and in the bottom you can have one or more view states depending on what i am displaying to the user. SO its the same core state of the provider with multiple view states. thats main idea of the entire framework. this is called quad model core config, view config, core state view state. view maps to core and state will refer to the configuration.
-the bottom is the class heirchy diagram. how this is maintainted internally. You have model config, param config, paramtype field, nested n collection.
-wwe have a model i.e., provider. Under provider i have multiple parameters.i have name address etc. the parameters can be of type fies(name) or nested(address). meaning first name , last name etc are fields. address is nested( which has field) or which can alosj be a collection where we cna have phone numbers, one or more addresses. Address is a type collection which is of type nested.
-
-class diagram of how things are maintained withinthe framwework.
+Let us understand this with the help of a Provider example. 
 
 
-just take those 2 boxes from the top
 
-== State action model:
+**(a) Core Config definition:**
+
+** The pure defintion of a provider is given by core config.
+** In the form where we are entering the data, we may capture first name, lastname and tax id of the provider and not everything. 
++
+Example: Core Config gives Name, Address and TaxId etc of your provider domain.
+
+**(b) View Config definition:**
+
+** Requirements are different for view. 
+** The View Config can be used capture only limited(needed) data of the Core (Provider)
+** The View Config maps to the Core Config.
+** Based on one core definition we can create mulitple view definitions. This is because the provider being used would be different in different places but the definition of the provider does not change
+** There are multiple ways to view providers as well. This can either be requesting providers or servicing providers
+
+Thus we have seen the definiton of the provider in terms of core and view
+
+===== Entity State
+
+** State is the value of the provider object at the given instance or in a session.
+** When an application is running, the user may enter data. We have a state when we start capturing data about the provider.
+** As you know, we have core and view for configuration. Likewise we have core and view for state as well.
+** Example: 
+.. In our application, consider we open a provider-finder page and search for a provider. In the result page you would like to see only relevant details like the first page u may want to see only the provider name, address and speciality.This is one view of the provider.
+.. Consider we have a button 'View Details' in the same provider-finder page. Once you click that button, we can see more provider details say affiliations, visting office locations etc. This is an other view for the same provider.
+** On the top you have the **Core State** which is the entire state of the provider 
+** We can have one or more **View States** depending on what we are displaying to the user. 
+** So its the same core state of the provider with multiple view states. 
+** This is the main idea of the entire framework. 
+
+==== Lower Block
+
+
+** This block explains the class heirchy diagram. 
+** This is maintainted internally by **Model Config, Param Config, ParamType field, Nested and Collection**.
+** Consider our provider as **Model**. Under provider we can have multiple **parameters** like First Name, Last Name, Address etc. The parameters can be of type **Simple fields**(First Name, Last Name) or **Nested**(Address). The Nested type can also be a **Collection** where we can have phone numbers, one or more addresses. Address is a type Collection which is of type Nested.
+
+
+== State Action Model
+
+This is the class diagram of how things are maintained within the framwework.
+
+
 image::RF2.png[RF7]
 
-mvc a pattern which shows how the front end backend and database ar4e presented. so we are following state action model. we talked about quad model. Quad model is on the server sideamd then you have a front end which the user sees which is in angular.
-top is the server bottom is the front end9 above orange line server below fonrt end).
-top, on the left we can see work flow and rules:which syas that we have workflows and rules which change the state. whenever there is an user action that happens say for eg a buttion click or UI action, it can trigger a differnt work flow or it can trigger a rule based on what he entered. Now,when these workflows and rule execute, it is going to change the state.For example  if the provider code is 1234,then the case is approved.so the user entered 1234 the rule got executed and set the status of the case as approved. SO the state changed based on the rule. there are workflows and rules tat act on a state and change the state.now what truggers the workfloew?->the command getway. what is a command gateway? these are mutliple actions come from the frontend. eg take CRUD oprn, take basic UI. We are adding a provider deleteing a provider, updating a provider..Create read update delete. any of these actions can happen to any of the entities. when that happens, all the commands go through the command gateway.We have our own  command DSL.
-User is doing some actions & frontend code is sending those commands to server. Server in the command gateway will interpret that ( that means it will know what to do) and might trigger work flows rules or stright update the state in the database. that is called command gateway.So server is done.
+** Nimbus framework follows **State Action Model** architectural pattern 
+** Quad model is on the server side and Angular is used on the front-end
+** Let us split the diagram into 2 blocks based on the orange dotted line
+** Upper part represents server and Lower part represents front end
+** Flow of the framework: **UI-->Server-->UI**
+* Whenever UI interactions happen, the corresponding configs are executed through Command Gateway. Then the Command Gateway will trigger Workflow and Rules. When there is a State change, UI will be informed/notified and Angular will update the components accordingly
 
-Front end:( blue line that goes from entity state to even t handling)
-any time the state changes, the UI shoudl know that something has changed.Becoz we need to provide the new information to the user. so anytime some action happens and state changes, server will immedietely send state change to the friont end. in the front end, the way we handle state changes is we have something called RXJs.that handles the events.basically it gives something like a subscriber. it constlanly subscribes to events and anytime it geta subscrption or an event change, it will notify the front componenets and they will updtae themeselves. Whenever an event happens, this comes to the event handleer which listens to all the changes. as soon as it get an event , its going and updating the view state. BView state is what the users see.view state on the top is matching state the server maintains.(both will have modified data). The view state in the server maintains the view state in frotend. server is the referrence. the fornt end syas oh i got an event, it says something changed i.e., this parameter changed. so what is thr new value of the paramenter. so its going and getiing the value from the server view state and displaying.the event updates are like this. 
+==== Lower Block
 
-example:; case status changed:
-server is sending an event saying that status changed then ui ask wats the new status now? approve. ok i will show approve.
+**Front end:**
 
-next action:exaplins wats the user suppose to do next. like go to the next action like go to new page, click button or something. all these actions keeps going. with every action that gets triggered, for example submit provider details..thats the action. when this action happens, we are going to another view.when i enter providers, its going to show me the list of providers. so thats the next view. from the controller the next view is going to view state. there was an action, action went to angular controller, which calls the commmand gateway in the serfver. the server id something and syas go to the next page.the next page is the complete different view. the view refreshes on front emd.
-in the bottom you can see that we are using angular with typescript. thats the core UI. and that has view components and there are mulitple view components. (library).. we have many viewscom..form gird tile textbox accordion..there are many compomnets . this says the view components are one of these types.
-immutable: we cannot change the state of the variable. its controlled by the server. 
+** Note the blue line that goes from Entity State( Upper Block) to Event Handling(Lower Block)
+** Whenever the state changes, the UI should be notified of the same and we have to provide new information to the user. 
+** For every action and state change, server will send 'state change notification' to the front end
+** Front end handles the events through **RxJS**
+** We know that '**RxJS** code involves making subscriptions to observables' 
+** **RxJS** constantly subscribes to events and whenever it receives a subscrption or an event change, it will notify the front end components and they will update themeselves
+**  Whenever an event happens,**RxJS** comes to the event handler which listens to all the changes. 
+** As soon as **RxJS** get an event, it will update **View State**
+** **View State:** This is what the users see
+** **View State** in the front-end matches the state maintained by the server(both will have modified data) 
+** The **View State** in the server maintains the View State in frontend
+** Server acts as the referrence 
+* Example:
+..  The front end gets an event saying that the case status is changed
+.. Now ,what could be the new value of the status?
+.. Front end will go and get the value from the Server's **View State** and  will display the new value 'Approved'.
 
-state says: just what the state is
-but there should be some logiv oin the front end , that knows they have to read this in front end, that know what comps to render. all these ar 3in yellow box.
+** **next action** explains what the user is supposed to do next
+* Example: Go to new page, click button etc.
+** **next view:** For every triggered action, you will be directed to **next view**.
+* Example : You enter a new provider's details and submit. Once done, you can view the provider's page, which displays a list of providers along with the latest.
+** From the **Controller(Angular)**, the **next view** is going to **View State** 
+** Whenever an event occurs, **next action** goes to **Controller(Angular)** , which calls the **Command Gateway** in the server
+** Based on that event, **Workflows and rules** changes the state.
+** The server acts and instructs to display the next page.
+** The next page is a completely different view
+** The view get refreshed on the front end
+** Core UI is Angular(**Rendering Logic**) with Typescript(** View Components**)
+** **View Component Library** has mulitple view components 
+* Example: Form, Grid, Tile, Textbox, Accordion etc
+** **supplied immutable** indicates that the state of the variable cannot be changed by the UI and is controlled  and changed by the server. 
 
-view state is what users see.but for that to happen, there is some code written in the background, there is some view componets. thats in the bottom
+==== Upper Block
 
-eg :which sows difference b/w core n view
+**Workflow & Rules:**
 
-QUERY DSL:
+Workflows and rules changes the state. 
+
+** Whenever an user action happens like a button click, it can trigger a work flow or a rule  
+** When these workflows and rule execute,the state changes.
+** Example:
+.. Consider a rule that if the provider code is 1234, the status of case should be approved. 
+.. So if an user entered 1234 as the provider code, the above rule will be executed and the status of the case would be set as approved. 
+.. Here the state is changed based on a rule. 
+
+**Command Gateway:**
+
+Command Gateways are mutliple actions that come from the frontend. 
+
+** Example:
+.. Consider a basic UI operation or a CRUD operation.
+.. We can add a provider, delete a provider, update a provider or view a provider. That is we can create, read, update and delete a provider 
+.. Any of these actions can happen to entities
+** When an action happens, all the commands go through the Command Gateway
+** Front end user does some actions and front-end code sends those commands to server 
+** Server in the command gateway will interpret those commands and might trigger work flows rules or straight update the state in the database. 
+** We have our own **Command Query Domain Specific Language** to serve the purpose
+** **Command Query Domain Specific Language:** The  **Command**  is  the  instruction  that  the  Framework  understands  to  execute  and  come  back  with an output. It is similar to writing the traditional method calls for an action (such as a button click)to perform business logic, but attempts to introduce a standardized process via the use of a domainspecific language (DSL) that the Framework can interpret. This is called the **Command Query DSL**.The  Command  Query  DSL  is  represented  in  URL  format  (commonly  referred  to  as  the  CommandURL) and is based on Query DSL.
+
+=== QUERY DSL:
+
+* Commands acts on domain which instructs how to behave 
++
+** Create: Create new provider
+** Read: To retrive the data 
+** Update:To update the data
+** Delete: To delete the data
 image::RF3.png[RF3]
+* Please visit the link below to get more clarity on QUERY DSL
+[blue]#** https://confluence.anthem.com/pages/viewpage.action?spaceKey=NIM&title=Framework+Reference+Documentation&preview=/208749944/230400439/1.1.5.BUILD-SNAPSHOT.pdf **#
 
-TECH stacks:
+* Look for **Chapter 3: The Command Query DSL, Page 18**
 
-these are the technologies that we are using in the framework.
+=== TECH stacks:
+
+These are the technologies that we are using in the framework.
 
 
 image::RF4.png[RF4]
 
 
 
-=== Usability of the framework
-With the help of this framework, we can create a HelloWorld application, PetClinic application or any other application. It is the framework’s configuration capability which enables us to build different applications.
-This diagram explains e
-image::structure.png[structure]
+=== Usability of Nimbus framework
+With the help of Nimbus framework, we can create basic HelloWorld application, PetClinic application or any other application. It is the framework’s configuration capability which enables us to build different applications.
 
-=== Framework Overview and Architecture
-Please click on the link below to see an overview and architecure of Nimbus.
+image::structure.png[structure]
 
