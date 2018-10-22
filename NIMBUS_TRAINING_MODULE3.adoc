@@ -46,7 +46,7 @@ The developers are expected to have all the softwares mentioned below installed 
 
 |=========================================================
 
-NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.0.M2-SNAPSHOT**.
+NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.x**.
       The versions are subjected to change.
 
 
@@ -55,19 +55,27 @@ NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.0.M2-SN
 .  Go to 
 [blue]#**https://github.com/openanthem/nimbus-core**# and select Branch as [navy]#**1.1.x**#.
 +
-image::CLL1.png[cl1]
+image::CL11.png[cl1]
 
-.	Click the [navy]#** Clone or Download **# button and copy the hyperlink
+.	Click the [navy]#** Clone or Download **# button
++
+image::CL22.png[cl1]
+. Copy the hyperlink
 [blue]#**
 https://github.com/openanthem/nimbus-core.git**#
+
 +
-image::CN1.png[cl1]
+image::CL33.png[cl1]
 
 .	Open Terminal
 
-.	Create a new folder named [navy]#**git**# in your cd /Users/AX12345
-
-.	Navigate to the folder and run the following command
+.	Create any new folder in your Desktop
++
+image::CL333.png[cl1]
+.	Navigate to the folder
++
+image::CL44.png[cl1] 
+. Run the following command
 +
 [subs="quotes"]
 -----------------------------------
@@ -75,12 +83,19 @@ image::CN1.png[cl1]
 https://github.com/openanthem/nimbus-core.git
 ** 
 ----------------------------------- 
++
+image::CL55.png[cl1]
+. Navigate to [navy]#**nimbus-core**# folder which resides in your new folder
++
+image::CL66.png[cl1]
 . Build the projects by typing the command
 +
 [subs="quotes"]
 -----------------------------------
 **sh build-projects.sh ** 
 -----------------------------------
++
+image::CL77.png[cl1]
 . We are done cloning the framework code in our local folder
 
 === Examples

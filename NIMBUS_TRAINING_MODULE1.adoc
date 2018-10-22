@@ -49,7 +49,7 @@ Programmers who needs to do the initial development enviornment set up to work w
 
 |=========================================================
 
-NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.0.M1-SNAPSHOT**.
+NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.x**.
       The versions are subjected to change.
 
 === Installations
