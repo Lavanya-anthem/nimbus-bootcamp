@@ -20,11 +20,11 @@
 
 === Introduction
 
-This module helps you to create simple examples using NIMBUS framework
+This module helps you to play around with the Petclinic Application
 
 === Audience
 
-Programmers who have successfully set up the development environment for NIMBUS framework.
+Programmers who have successfully set up the development environment for NIMBUS framework and gone through the basic examples.
 
 === Pre-requisites
 
@@ -72,7 +72,7 @@ image::CL33.png[cl1]
 
 .	Open Terminal
 
-.	Create any new folder in your Desktop
+.	Create any new folder in your Desktop. Here, we have created a new folder named [navy]#**nimbus_code**#
 +
 image::CL333.png[cl1]
 .	Navigate to the folder
@@ -99,6 +99,9 @@ image::CL66.png[cl1]
 -----------------------------------
 +
 image::CL77.png[cl1]
+. You can see a ** "##Finished building" ** message
++
+image::CL88.png[cl1]
 . We are done cloning the framework code in our local folder
 
 === Cloning Pet-Clinic Code
@@ -110,8 +113,8 @@ image::P11.png[P11]
 [blue]#** https://AF84298@bitbucket.anthem.com/scm/nim/petclinic-training.git **#
 +
 image::P12.png[P12]
-.	Open Terminal 
-.	Navigate to the git folder path and run the following command
+.	Open [navy]#** Terminal **#
+.	Navigate to the folder path and run the following command
 +
 [subs="quotes"]
 -----------------------------------
