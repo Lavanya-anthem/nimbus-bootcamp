@@ -96,9 +96,28 @@ image::CL66.png[cl1]
 -----------------------------------
 +
 image::CL77.png[cl1]
+. You can see a ** "##Finished building" ** message
++
+image::CL88.png[cl1]
 . We are done cloning the framework code in our local folder
 
 === Examples
+
+All the examples can be cloned from the below two gitbub repositories
+
+. [navy]#**HelloWorld-and-Form-Elements-Code-Snippets:**# 
+
+.. [blue]#** https://github.com/Lavanya-anthem/HelloWorld-and-Form-Elements-Code-Snippets **#
+
+.. In this repo, you have two branches: [navy]#**'helloworld' & 'form-elements' **#
+
+. [navy]#**Drools-Actions-DB-examples:**#
+
+.. [blue]#** https://github.com/Lavanya-anthem/Drools-Actions-DB-examples **#
+
+.. In this repo, there are three branches: [navy]#**'drools', 'fw-actions' & 'db-interaction' **#
+
+
 ==== Hello World 
 ====== Objective 
 To create a simple page which displays “Hello World! We have created our first application!”
@@ -1331,7 +1350,7 @@ when
 $core : DefaultParamState($core.findParamByPath("/../itname").getState()!=null)
 then
 $core.findParamByPath("/../otname").setState($core.findParamByPath("/../itname").getState());
-End
+end
 ------------
 
 . Build the project (Refer **5.1->8**)
@@ -1724,7 +1743,7 @@ public class Name extends AbstractEntity.IdLong{
 .**VRNewHelloLanding.java**
 [source, java]
 ------------
-package com.atlas.client.extension.newhello;
+package com.atlas.client.extension.newhello.view;
 
 import javax.validation.constraints.NotNull;
 
