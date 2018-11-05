@@ -103,7 +103,7 @@ image::CL88.png[cl1]
 
 === Examples
 
-All the examples can be cloned from the below two gitbub repositories
+All the examples can be cloned from the below two github repositories
 
 . [navy]#**HelloWorld-and-Form-Elements-Code-Snippets:**# 
 
@@ -117,6 +117,7 @@ All the examples can be cloned from the below two gitbub repositories
 
 .. In this repo, there are three branches: [navy]#**'drools', 'fw-actions' & 'db-interaction' **#
 
+. Import the projects in your STS. Right click the web folder and run as spring boot app
 
 ==== Hello World 
 ====== Objective 
