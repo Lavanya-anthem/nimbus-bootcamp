@@ -169,7 +169,7 @@ image::HWWcc.png[HW2]
   	<parent>
 		<groupId>com.antheminc.oss</groupId>
 		<artifactId>nimbus-parent</artifactId>
-		<version>1.1.0.M2-SNAPSHOT</version>
+		<version>1.1.10.BUILD-SNAPSHOT</version>
 		</parent>
 	<dependencies>
 		<dependency>
@@ -376,10 +376,10 @@ image::HWWWe.png[HW1]
   <parent>
 		<groupId>com.antheminc.oss</groupId>
 		<artifactId>nimbus-parent</artifactId>
-		<version>1.1.0.M2-SNAPSHOT</version>
+		<version>1.1.10.BUILD-SNAPSHOT</version>
 	</parent>
   <properties>
-  	<nimbus.version>1.1.0.M2-SNAPSHOT</nimbus.version>
+  	<nimbus.version>1.1.10.BUILD-SNAPSHOT</nimbus.version>
   </properties>
 
   <dependencies>
