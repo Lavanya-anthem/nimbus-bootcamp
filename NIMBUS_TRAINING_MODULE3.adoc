@@ -151,7 +151,9 @@ image::HW2.png[HW2]
 image::HWWcc.png[HW2]
 . Update pom.xml 
 .. Expand the folder and open pom.xml (file which contains the project configuration details used by Maven)
-..	Add the parent class information
+..	Add the parent class information. Here we have added the version of parent as [navy]#**1.1.10.BUILD-SNAPSHOT**#. Check the version of the parent @ [blue]#** https://github.com/openanthem/nimbus-core/blob/1.1.x/pom.xml **# while upadting pom.xml
++
+image::pom.png[HW2]
 .. Add the project dependencies 
 .. Add the plugins requires to configure this project
 +
