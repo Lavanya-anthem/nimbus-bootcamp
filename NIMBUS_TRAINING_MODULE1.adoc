@@ -189,56 +189,17 @@ image::GITT2.png[GV]
 
 ==== Installation of Spring Tool Suite 
 
-..	Run the following brew formula on your terminal in the mentioned order	
+..	 Go to [blue]#**https://spring.io/tools3/sts/all **#
+.. Click the appropriate dmg file for mac
++
+image::sts11.png[sts]
 
-+
-[subs="quotes"]
------------------------------------
-[navy]#**$ brew update
-**#
------------------------------------
-+
-image::SS1.png[GV]
-+
-[subs="quotes"]
------------------------------------
-[navy]#**
-$ brew tap caskroom/cask
-**#
------------------------------------
-+
-image::SS2.png[GV]
-+
-[subs="quotes"]
------------------------------------
-[navy]#** 
-$ brew  search sts
-**#
------------------------------------
-+
-image::SS3.png[GV]
-+
-[subs="quotes"]
------------------------------------
-[navy]#**
-$ brew cask info sts
-**#
------------------------------------
-+
-image::SS5.png[GV]
-+
-[subs="quotes"]
------------------------------------
-[navy]#**
-$ brew cask install sts**#
------------------------------------
-+
-image::SS4.png[GV]
-.. [navy]#**STS**# is installed
-+
-image::STSS11.png[GV]
+.. You  can see the file inside your [blue]#**"/Downloads" **# folder
 
-.. [navy]#**STS**# will be installed in your [blue]#**"/Applications" **# folder
+.. Open the dmg file
+.. Drag and drop STS to your [blue]#**"/Applications" **# folder
+
+.. [navy]#**STS**# is installed in your [blue]#**"/Applications" **# folder
 +
 image::STS22.png[GV]
 .. To run [navy]#**STS**#, open the [blue]#** "/Applications"**# folder and click on the **"STS"** icon. Click [navy]#**Open**# in the alert window
@@ -478,6 +439,30 @@ Example:
 **#
 
 == Appendix
+=== Installation of Node.js
+
+
+.. Open Terminal
+.. Run the following brew formula on your terminal
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ brew install node **#
+-----------------------------------
+..	Once installed, we can check the installation by running the below formulae on your terminal
++
+[subs="quotes"]
+-----------------------------------
+[navy]#** $ node -v 
+$ npm -v 
+**#
+-----------------------------------
+..	 The terminal shows the following output:
++
+image::nd.png[DV1]
+
+.. [navy]#**Node.js**# is installed!
+
 === How to work with MongoDB through Docker
 
 ==== Installation of Docker

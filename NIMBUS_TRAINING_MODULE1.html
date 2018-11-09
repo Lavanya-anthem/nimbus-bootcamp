@@ -759,11 +759,12 @@ p.tableblock.header { color: #6d6e71; }
 <li><a href="#_certificates_required_for_developmentfor_using_the_framework_within_anthem">6. Certificates Required for Development(For using the framework within Anthem)</a></li>
 <li><a href="#_appendix">7. Appendix</a>
 <ul class="sectlevel2">
-<li><a href="#_how_to_work_with_mongodb_through_docker">7.1. How to work with MongoDB through Docker</a>
+<li><a href="#_installation_of_node_js">7.1. Installation of Node.js</a></li>
+<li><a href="#_how_to_work_with_mongodb_through_docker">7.2. How to work with MongoDB through Docker</a>
 <ul class="sectlevel3">
-<li><a href="#_installation_of_docker">7.1.1. Installation of Docker</a></li>
-<li><a href="#_installation_of_mongodb">7.1.2. Installation of MongoDB</a></li>
-<li><a href="#_working_with_mongodb_through_docker">7.1.3. Working with MongoDb through Docker</a></li>
+<li><a href="#_installation_of_docker">7.2.1. Installation of Docker</a></li>
+<li><a href="#_installation_of_mongodb">7.2.2. Installation of MongoDB</a></li>
+<li><a href="#_working_with_mongodb_through_docker">7.2.3. Working with MongoDb through Docker</a></li>
 </ul>
 </li>
 </ul>
@@ -1112,76 +1113,27 @@ $ brew tap caskroom/versions
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
-<p>Run the following brew formula on your terminal in the mentioned order</p>
-<div class="listingblock">
-<div class="content">
-<pre><span class="navy"><strong>$ brew update
-</strong></span></pre>
-</div>
-</div>
+<p>Go to <span class="blue"><strong><a href="https://spring.io/tools3/sts/all" class="bare">https://spring.io/tools3/sts/all</a> </strong></span></p>
+</li>
+<li>
+<p>Click the appropriate dmg file for mac</p>
 <div class="imageblock">
 <div class="content">
-<img src="SS1.png" alt="GV">
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre><span class="navy"><strong>
-$ brew tap caskroom/cask
-</strong></span></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="SS2.png" alt="GV">
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre><span class="navy"><strong>
-$ brew  search sts
-</strong></span></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="SS3.png" alt="GV">
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre><span class="navy"><strong>
-$ brew cask info sts
-</strong></span></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="SS5.png" alt="GV">
-</div>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre><span class="navy"><strong>
-$ brew cask install sts</strong></span></pre>
-</div>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="SS4.png" alt="GV">
+<img src="sts11.png" alt="sts">
 </div>
 </div>
 </li>
 <li>
-<p><span class="navy"><strong>STS</strong></span> is installed</p>
-<div class="imageblock">
-<div class="content">
-<img src="STSS11.png" alt="GV">
-</div>
-</div>
+<p>You  can see the file inside your <span class="blue"><strong>"/Downloads" </strong></span> folder</p>
 </li>
 <li>
-<p><span class="navy"><strong>STS</strong></span> will be installed in your <span class="blue"><strong>"/Applications" </strong></span> folder</p>
+<p>Open the dmg file</p>
+</li>
+<li>
+<p>Drag and drop STS to your <span class="blue"><strong>"/Applications" </strong></span> folder</p>
+</li>
+<li>
+<p><span class="navy"><strong>STS</strong></span> is installed in your <span class="blue"><strong>"/Applications" </strong></span> folder</p>
 <div class="imageblock">
 <div class="content">
 <img src="STS22.png" alt="GV">
@@ -1756,9 +1708,48 @@ Example:
 <h2 id="_appendix">7. Appendix</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_how_to_work_with_mongodb_through_docker">7.1. How to work with MongoDB through Docker</h3>
+<h3 id="_installation_of_node_js">7.1. Installation of Node.js</h3>
+<div class="olist loweralpha">
+<ol class="loweralpha" type="a">
+<li>
+<p>Open Terminal</p>
+</li>
+<li>
+<p>Run the following brew formula on your terminal</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ brew install node </strong></span></pre>
+</div>
+</div>
+</li>
+<li>
+<p>Once installed, we can check the installation by running the below formulae on your terminal</p>
+<div class="listingblock">
+<div class="content">
+<pre><span class="navy"><strong> $ node -v
+$ npm -v
+</strong></span></pre>
+</div>
+</div>
+</li>
+<li>
+<p>The terminal shows the following output:</p>
+<div class="imageblock">
+<div class="content">
+<img src="nd.png" alt="DV1">
+</div>
+</div>
+</li>
+<li>
+<p><span class="navy"><strong>Node.js</strong></span> is installed!</p>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_to_work_with_mongodb_through_docker">7.2. How to work with MongoDB through Docker</h3>
 <div class="sect3">
-<h4 id="_installation_of_docker">7.1.1. Installation of Docker</h4>
+<h4 id="_installation_of_docker">7.2.1. Installation of Docker</h4>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -1814,7 +1805,7 @@ Example:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_installation_of_mongodb">7.1.2. Installation of MongoDB</h4>
+<h4 id="_installation_of_mongodb">7.2.2. Installation of MongoDB</h4>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -1877,7 +1868,7 @@ $ brew install mongodb </strong></span></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_working_with_mongodb_through_docker">7.1.3. Working with MongoDb through Docker</h4>
+<h4 id="_working_with_mongodb_through_docker">7.2.3. Working with MongoDb through Docker</h4>
 <div class="olist loweralpha">
 <ol class="loweralpha" type="a">
 <li>
@@ -1977,7 +1968,7 @@ Have a happy coding !</p>
 <div id="footer">
 <div id="footer-text">
 Version v1.1<br>
-Last updated 2018-10-22 16:47:39 EDT
+Last updated 2018-11-09 11:24:29 EST
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
