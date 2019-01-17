@@ -105,6 +105,9 @@ image::CL88.png[cl1]
 
 All the examples can be cloned from the below two github repositories
 
+NOTE: Point to the latest framework([blue]#** 
+https://github.com/openanthem/nimbus-core/blob/1.1.x/pom.xml **# ) and check and update the nimbus-parent version in the pom.xml of the below examples
+
 . [navy]#**HelloWorld-and-Form-Elements-Code-Snippets:**# 
 
 .. [blue]#** https://github.com/Lavanya-anthem/HelloWorld-and-Form-Elements-Code-Snippets **#

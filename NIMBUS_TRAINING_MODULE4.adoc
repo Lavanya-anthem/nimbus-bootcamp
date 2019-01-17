@@ -46,7 +46,7 @@ The developers are expected to have all the softwares mentioned below installed 
 
 |=========================================================
 
-NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.x**.
+NOTE: Above s/w versions are compatible with Nimbus f/w version    **2.0.x**.
       The versions are subjected to change.
 
 
@@ -57,40 +57,40 @@ take the latest nimbus odss code from github:
 
 
 .  Go to 
-[blue]#**https://github.com/openanthem/nimbus-core**# and select Branch as [navy]#**1.1.x**#.
+[blue]#**https://github.com/openanthem/nimbus-core**# and select Branch as [navy]#**2.0.x**#.
 +
-image::CL11.png[cl1]
+image::CL1AA.png[cl1]
 .	Click the [navy]#** Clone or Download **# button
 +
-image::CL22.png[cl1]
+image::CLCC.png[cl1]
 . Copy the hyperlink
 [blue]#**
 https://github.com/openanthem/nimbus-core.git**#
 
 +
-image::CL33.png[cl1]
+image::CLBB.png[cl1]
 
 .	Open Terminal
 
 .	Create any new folder in your Desktop. Here, we have created a new folder named [navy]#**nimbus_code**#
 +
-image::CL333.png[cl1]
+image::CL111.png[cl1]
 .	Navigate to the folder
 +
-image::CL44.png[cl1] 
+image::CL222.png[cl1] 
 . Run the following command
 +
 [subs="quotes"]
 -----------------------------------
-**git clone -b 1.1.x 
+**git clone -b 2.0.x 
 https://github.com/openanthem/nimbus-core.git
 ** 
 ----------------------------------- 
 +
-image::CL55.png[cl1]
+image::CL333.png[cl1]
 . Navigate to [navy]#**nimbus-core**# folder which resides in your new folder
 +
-image::CL66.png[cl1]
+image::CL444.png[cl1]
 . Build the projects by typing the command
 +
 [subs="quotes"]
@@ -98,371 +98,115 @@ image::CL66.png[cl1]
 **sh build-projects.sh ** 
 -----------------------------------
 +
-image::CL77.png[cl1]
+image::CL555.png[cl1]
 . You can see a ** "##Finished building" ** message
 +
-image::CL88.png[cl1]
+image::CL666.png[cl1]
 . We are done cloning the framework code in our local folder
 
 === Cloning Pet-Clinic Code
 
-. Login to: [blue]#**https://bitbucket.anthem.com/projects/NIM/repos/petclinic-training/browse?at=refs%2Fheads%2Fdevelop **#
+. Go to: [blue]#**https://github.com/openanthem/petclinic-training**#
 +
-image::P11.png[P11]
-.	Click [navy]#**clone **# and copy the hyperlink
-[blue]#** https://AF84298@bitbucket.anthem.com/scm/nim/petclinic-training.git **#
+image::PET1.png[P11]
+.	Click [navy]#** Clone or Download **# button
 +
-image::P12.png[P12]
-.	Open [navy]#** Terminal **#
-.	Navigate to the folder path and run the following command
+image::PET2.png[P11]
+. Copy the hyperlink
+[blue]#** https://github.com/openanthem/petclinic-training.git **#
++
+image::PET3.png[P12]
+.	Open [navy]#** Terminal **# and create a new folder
++
+image::PET4.png[P11]
+.	Navigate to the folder path 
++
+image::PET5.png[P11]
+. Run the following command
 +
 [subs="quotes"]
 -----------------------------------
-*git clone -b develop https://AF84298@bitbucket.anthem.com/scm/nim/petclinic-training.git*
+*git clone -b 2.0.x https://github.com/openanthem/petclinic-training.git*
 -----------------------------------
 +
-image::P13.png[P13]
+image::PET6.png[P13]
 . Terminal displays successful message
-. Make sure your mongo db is running
-. Import [navy]#**com.anthem.client.extension.petclinic**# and [navy]#**petclinic-web**# in [navy]#**STS**# 
+
+. Import the  [navy]#**petclinic-training project **# in [navy]#**STS**# 
 +
-image::PT2.png[PT2]
-. Build the project
+image::PET7.png[PT2]
+. You can see that the following folders are imported
 +
-image::PT3.png[PT4]
-. Run the application
+image::PET8.png[PT2]
 +
-image::PT5.png[PT5]
+image::PET9.png[PT4]
+. Build the projects
++
+image::PET10.png[PT4]
++
+image::PET11.png[PT4]
++
+. Make sure your [navy]#**mongo db**# is running. Go to Terminal and run the command
++
+[subs="quotes"]
+-----------------------------------
+*brew services list*
+-----------------------------------
++
+image::PEN.png[PT4]
+. Run [navy]#**nimbus-ui**# .Go to Terminal. Navigate to nimbus_code/nimbus-core/nimbus-ui/nimbusui and run the command
++
+[subs="quotes"]
+-----------------------------------
+*npm start*
+-----------------------------------
++
+image::PEN1.png[PT4]
+. You can see the compiled successfully message.
++
+image::PEN2.png[PT4]
+. Now, open STS
+.. Run cloud-config as a spring boot application
++
+image::PET12.png[PT5]
++
+image::PET13.png[PT5]
+.. Run petclinic-gateway as a spring boot application
++
+image::PET14.png[PT5]
+.. Run petclinic-web as a spring boot application
++
+image::PET15.png[PT5]
 . Select the application as 
 +
-image::PT6.png[PT6]
-. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
+image::PET16a.png[PT6]
+. Launch the app by visting  http://localhost:8080/petclinic#/h/petclinicdashboard/vpDashboard
 +
-image::PT7.png[PT7]
+image::PET17.png[PT7]
 
 == Playing around with Pet-Clinic App:
 
 === Adding a new Owner:
-. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
+. Launch the app by visiting http://localhost:8080/petclinic#/h/petclinicdashboard/vpDashboard 
 +
-image::O1.png[O1]
-.. Click Owners
+image::PET17.png[O1]
+. Click [green]#**Owners**#
 +
-image::O2.png[O2]
-.. You will be redirected to [green]#**Owners**# page
+image::PET18.png[O2]
+. You will be redirected to [green]#**Owners**# page. Ente first name and last name and Click [green]#**Add Owner**#
 +
-image::O3.png[O3]
-.. Click [green]#**Add Owner**#
-+
-image::O3a.png[O3a]
+image::PET19.png[O3]
 .. You will be redirected to [green]#**Add Owners**# page
 +
-image::O4.png[O4]
-.. Enter the details
+image::PET20.png[O3a]
+
+.. Enter the details and Click [green]#**Submit**#
 +
-image::O5.png[O5]
-.. Click [green]#**Submit**#
-+
-image::O5a.png[O5a]
+image::PET21.png[O5]
 .. You can view the details in [green]#**Owners**# page
 +
-image::O6.png[O6]
+image::PET22.png[O6]
 
-=== Adding a new column:
-. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
-+
-image::O1.png[O1]
-. Click [green]#**Owners**#
-+
-image::O2.png[O2]
-. You will be re-directed to Owners page. You can view the Owner details with  4 coloumns [green]#**First Name, Last Name, Owner City, Telephone**# . Let us try to display one more column [green]#**Zip Code**# in this page. Copy [green]#**vpOwner**# string from the url, as we are trying to search for the page that contains the column names to be displayed.
-+
-image::C11a.png[C11]
-.  Goto [navy]#**STS**#, Click on [navy]#**Search--> File**#
-+
-image::C12.png[C11]
-. In [navy]#**File Search**# tab, type [green]#**vpOwner**# in [navy]#**Containing text**# textbox. Click [navy]#**Search**#
-+
-image::C13.png[C11]
-. You can see a list of files that contains [green]#**vpOwner**#
-+
-image::C14.png[C11]
-. There are 2 classes where we have [green]#**vpOwner**# : [navy]#**VROwner**# and [navy]#**VROwnerLanding.java**#
-+
-image::C15.png[C11]
-. Framework uses the convention of [green]#**'VP'**# to denote  a page.Let us open the class [navy]#**VROwnerLanding.java **# as we have [green]#**'VP'**#  in this class.
-+
-image::C16.png[C11]
-. We could see that [green]#**owners**# are of type [green]#**OwnerLineItem**#. 
-+
-image::C17.png[C11]
-. Find [navy]#**OwnerLineItem.java **# inside [navy]#** com.anthem.client.extension.petclinic->com.atlas.client.extension.petclininc.view->OwnerLineItem.java **#
-+
-image::C18.png[C11]
-. Open [navy]#**OwnerLineItem.java **# . You can see the columns names [green]#**First Name, Last Name, Owner City, Telephone**# which are displayed in the Owners page.
-+
-image::C19.png[C11]
-.  Lets add a piece of code to display [green]#** Zipcode **# as well
-+
-image::C2a.png[C2a]
-+
-.**OwnerLineItem.java**
-[source, java]
-------------
+== Conclusion:
 
-package com.atlas.client.extension.petclinic.view;
-
-import java.util.List;
-
-import com.antheminc.oss.nimbus.domain.defn.Execution.Config;
-import com.antheminc.oss.nimbus.domain.defn.MapsTo;
-import com.antheminc.oss.nimbus.domain.defn.MapsTo.Path;
-import com.antheminc.oss.nimbus.domain.defn.Model;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.Grid;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.GridColumn;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.GridRowBody;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.Link;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.LinkMenu;
-import com.antheminc.oss.nimbus.domain.defn.extension.Content.Label;
-import com.atlas.client.extension.petclinic.core.Owner;
-
-import lombok.Getter;
-import lombok.Setter;
-
-@MapsTo.Type(Owner.class)
-@Getter @Setter
-public class OwnerLineItem {
- 
-	@GridColumn(hidden=true)
-    @Path 
-    private Long id;
- 
-    @Label("First Name")
-    @GridColumn
-    @Path
-    private String firstName;
-    
-    @GridRowBody
-    private ExpandedRowContent expandedRowContent;
-    
-    @Model @Getter @Setter
-    public static class ExpandedRowContent {
-    	
-    	@Label("Pets")
-    	@Grid(onLoad = true)
-    	@Path(linked = false)
-		@Config(url="<!#this!>.m/_process?fn=_set&url=/p/pet/_search?fn=example")
-        private List<PetLineItemOwnerLanding> pets;
-    }
- 
-    @Label("Last Name")
-    @GridColumn
-    @Path
-    private String lastName;
- 
-    @Label("Owner City")
-    @GridColumn
-    @Path("city")
-    private String ownerCity;
- 
-    @Label("Telephone")
-    @GridColumn
-    @Path
-    private String telephone;   
-   
-   @Label("ZipCode")
-    @GridColumn
-    @Path
-    private String zip;  
-    
-    @LinkMenu
-    private VLMCaseItemLinks vlmCaseItemLinks;
-   
-    @Model @Getter @Setter
-    public static class VLMCaseItemLinks {
-        
-    	@Label("Edit")
-        @Link(imgSrc="edit.png")
-    	@Config(url="/p/ownerview:<!/../id!>/_get")
-    	private String edit;
-     
-    	@Label("Owner Info")
-        @Link(imgSrc="task.svg")
-    	@Config(url="/p/ownerview:<!/../id!>/_get")
-        @Config(url="/p/ownerview:<!/../id!>/_nav?pageId=vpOwnerInfo")
-        private String ownerInfo;
-
-        }
-        }
-
-------------
-
-. In [navy]#**OwnerLineItem.java **#  , you can see that this class is mapped to [navy]#**Owner.class**#
-+
-image::C2b.png[C11]
-. Find [navy]#**Owner.java **# inside [navy]#** com.anthem.client.extension.petclinic->com.atlas.client.extension.petclininc.core->Owner.java **#
-+
-image::C2c.png[C11]
-. Since [navy]#**Owner.java **# is a core class , you can see the declaration/representation of all columns in the database here.
-+
-image::C22.png[C11]
-
-
-. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# . Click [green]#**Owners**# and then click [green]#**Add Owner**#
-+
-image::C23.png[C11]
-
-. Enter the value for [green]#**Zipcode **# 
-
-+
-image::C24.png[C11]
-
-. Enter the details and click [green]#**Submit**#
-
-+
-image::C25.png[C11]
-
-. You can see the column [green]#**Zipcode**# and its value displayed
-
-+
-image::C26.png[C11]
-
-=== Adding a action 'delete' for each owner:
-. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
-+
-image::CMN1.png[O1]
-. Click [green]#**Owners**#
-+
-image::CMN2.png[O1]
-. Click the action menu(arrows on the very right most end of each row). You can see [green]#**Edit**# and [green]#**Owner Info**#
-+
-image::CMN3.png[03]
-. As in previous example,let us open the class [navy]#**VROwnerLanding.java **# 
-+
-image::C16.png[C11]
-. We could see that the instance [green]#**owners**# are of type [green]#**OwnerLineItem**#
-+
-image::C17.png[C11]
-. Find [navy]#**OwnerLineItem.java **# inside [navy]#** com.anthem.client.extension.petclinic->com.atlas.client.extension.petclininc.view->OwnerLineItem.java **#
-+
-image::C18.png[C11]
-. Open [navy]#**OwnerLineItem.java **# . You can see the lines of code for actions [green]#**'Edit' **# and [green]#** 'Owner Info' **#
-+
-image::C2d.png[C11]
-. Let us add a piece of code to perform the action [green]#** 'Delete' **# in [navy]#**OwnerLineItem.java **# 
-+
-image::C2e.png[C11]
-+
-.**OwnerLineItem.java**
-[source, java]
-------------
-package com.atlas.client.extension.petclinic.view;
-
-import java.util.List;
-
-import com.antheminc.oss.nimbus.domain.defn.Execution.Config;
-import com.antheminc.oss.nimbus.domain.defn.MapsTo;
-import com.antheminc.oss.nimbus.domain.defn.MapsTo.Path;
-import com.antheminc.oss.nimbus.domain.defn.Model;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.Grid;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.GridColumn;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.GridRowBody;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.Link;
-import com.antheminc.oss.nimbus.domain.defn.ViewConfig.LinkMenu;
-import com.antheminc.oss.nimbus.domain.defn.extension.Content.Label;
-import com.atlas.client.extension.petclinic.core.Owner;
-
-import lombok.Getter;
-import lombok.Setter;
-
-@MapsTo.Type(Owner.class)
-@Getter @Setter
-public class OwnerLineItem {
- 
-	@GridColumn(hidden=true)
-    @Path 
-    private Long id;
- 
-    @Label("First Name")
-    @GridColumn
-    @Path
-    private String firstName;
-    
-    @GridRowBody
-    private ExpandedRowContent expandedRowContent;
-    
-    @Model @Getter @Setter
-    public static class ExpandedRowContent {
-    	
-    	@Label("Pets")
-    	@Grid(onLoad = true)
-    	@Path(linked = false)
-		@Config(url="<!#this!>.m/_process?fn=_set&url=/p/pet/_search?fn=example")
-        private List<PetLineItemOwnerLanding> pets;
-    }
- 
-    @Label("Last Name")
-    @GridColumn
-    @Path
-    private String lastName;
- 
-    @Label("Owner City")
-    @GridColumn
-    @Path("city")
-    private String ownerCity;
- 
-    @Label("Telephone")
-    @GridColumn
-    @Path
-    private String telephone;   
-    
-    @Label("ZipCode")
-    @GridColumn
-    @Path
-    private String zip;   
-    
-    @LinkMenu
-    private VLMCaseItemLinks vlmCaseItemLinks;
-   
-    @Model @Getter @Setter
-    public static class VLMCaseItemLinks {
-        
-    	@Label("Edit")
-        @Link(imgSrc="edit.png")
-    	@Config(url="/p/ownerview:<!/../id!>/_get")
-    	private String edit;
-     
-    	@Label("Owner Info")
-        @Link(imgSrc="task.svg")
-    	@Config(url="/p/ownerview:<!/../id!>/_get")
-        @Config(url="/p/ownerview:<!/../id!>/_nav?pageId=vpOwnerInfo")
-        private String ownerInfo;
-    	
-    	
-    	@Label("Delete")
-        @Link(imgSrc="task.svg")
-    	
-    	// Delete the record from the database
-    	@Config(url="/p/ownerview:<!/../id!>/_delete")
-    	
-    	/* This line will execute the configuration associated with owners so that it will run the fetch query against the database 
-    	and show the updated result */
-        @Config(url="<!#this!>/../../../../owners/_get")
-    	
-        private String delete;
-    }
-}
-------------
-
-. Launch the app by visiting [blue]#** http://localhost:8082/petclinic/login **# 
-+
-image::CMN1.png[O1]
-. Click [green]#**Owners**#
-+
-image::CMN2.png[O1]
-. Click the action menu. You can see [green]#**Edit**# , [green]#**Owner Info**# and [green]#** Delete**#
-+
-image::C2f.png[03]
-. Click the [green]#** Delete**#. You can see that the first row is deleted.
-+
-image::C2g.png[03]
+Now you know got to know how to work with the pet-clinic application!
