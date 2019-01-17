@@ -46,48 +46,50 @@ The developers are expected to have all the softwares mentioned below installed 
 
 |=========================================================
 
-NOTE: Above s/w versions are compatible with Nimbus f/w version    **1.1.x**.
+NOTE: Above s/w versions are compatible with Nimbus f/w version    **2.0.x**.
       The versions are subjected to change.
 
 
 === Cloning Nimbus Framework Code
 
-.  Go to 
-[blue]#**https://github.com/openanthem/nimbus-core**# and select Branch as [navy]#**1.1.x**#.
-+
-image::CL11.png[cl1]
+take the latest nimbus odss code from github:
 
+
+.  Go to 
+[blue]#**https://github.com/openanthem/nimbus-core**# and select Branch as [navy]#**2.0.x**#.
++
+image::CL1AA.png[cl1]
 .	Click the [navy]#** Clone or Download **# button
 +
-image::CL22.png[cl1]
+image::CLCC.png[cl1]
 . Copy the hyperlink
 [blue]#**
 https://github.com/openanthem/nimbus-core.git**#
 
 +
-image::CL33.png[cl1]
+image::CLBB.png[cl1]
 
 .	Open Terminal
 
-.	Create any new folder in your Desktop
+.	Create any new folder in your Desktop. Here, we have created a new folder named [navy]#**nimbus_code**#
 +
-image::CL333.png[cl1]
+image::CL111.png[cl1]
 .	Navigate to the folder
 +
-image::CL44.png[cl1] 
+image::CL222.png[cl1] 
 . Run the following command
 +
 [subs="quotes"]
 -----------------------------------
-**git clone -b 1.1.x 
+**git clone -b 2.0.x 
 https://github.com/openanthem/nimbus-core.git
 ** 
 ----------------------------------- 
 +
-image::CL55.png[cl1]
+image::CL333.png[cl1]
 . Navigate to [navy]#**nimbus-core**# folder which resides in your new folder
 +
-image::CL66.png[cl1]
+image::CL444.png[cl1]
 . Build the projects by typing the command
 +
 [subs="quotes"]
@@ -95,10 +97,10 @@ image::CL66.png[cl1]
 **sh build-projects.sh ** 
 -----------------------------------
 +
-image::CL77.png[cl1]
+image::CL555.png[cl1]
 . You can see a ** "##Finished building" ** message
 +
-image::CL88.png[cl1]
+image::CL666.png[cl1]
 . We are done cloning the framework code in our local folder
 
 === Examples
@@ -106,7 +108,7 @@ image::CL88.png[cl1]
 All the examples can be cloned from the below two github repositories
 
 NOTE: Point to the latest framework([blue]#** 
-https://github.com/openanthem/nimbus-core/blob/1.1.x/pom.xml **# ) and check and update the nimbus-parent version in the pom.xml of the below examples
+https://github.com/openanthem/nimbus-core/blob/2.0.x/pom.xml **# ) and check and update the nimbus-parent version in the pom.xml of the below examples
 
 . [navy]#**HelloWorld-and-Form-Elements-Code-Snippets:**# 
 

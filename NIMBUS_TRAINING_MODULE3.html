@@ -867,7 +867,7 @@ p.tableblock.header { color: #6d6e71; }
 <div class="title">Note</div>
 </td>
 <td class="content">
-Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.x</strong>.
+Above s/w versions are compatible with Nimbus f/w version    <strong>2.0.x</strong>.
       The versions are subjected to change.
 </td>
 </tr>
@@ -876,14 +876,17 @@ Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.x</stro
 </div>
 <div class="sect2">
 <h3 id="_cloning_nimbus_framework_code">4. Cloning Nimbus Framework Code</h3>
+<div class="paragraph">
+<p>take the latest nimbus odss code from github:</p>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
 <p>Go to
-<span class="blue"><strong><a href="https://github.com/openanthem/nimbus-core" class="bare">https://github.com/openanthem/nimbus-core</a></strong></span> and select Branch as <span class="navy"><strong>1.1.x</strong></span>.</p>
+<span class="blue"><strong><a href="https://github.com/openanthem/nimbus-core" class="bare">https://github.com/openanthem/nimbus-core</a></strong></span> and select Branch as <span class="navy"><strong>2.0.x</strong></span>.</p>
 <div class="imageblock">
 <div class="content">
-<img src="CL11.png" alt="cl1">
+<img src="CL1AA.png" alt="cl1">
 </div>
 </div>
 </li>
@@ -891,7 +894,7 @@ Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.x</stro
 <p>Click the <span class="navy"><strong> Clone or Download </strong></span> button</p>
 <div class="imageblock">
 <div class="content">
-<img src="CL22.png" alt="cl1">
+<img src="CLCC.png" alt="cl1">
 </div>
 </div>
 </li>
@@ -901,7 +904,7 @@ Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.x</stro
 <a href="https://github.com/openanthem/nimbus-core.git" class="bare">https://github.com/openanthem/nimbus-core.git</a></strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="CL33.png" alt="cl1">
+<img src="CLBB.png" alt="cl1">
 </div>
 </div>
 </li>
@@ -909,10 +912,10 @@ Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.x</stro
 <p>Open Terminal</p>
 </li>
 <li>
-<p>Create any new folder in your Desktop</p>
+<p>Create any new folder in your Desktop. Here, we have created a new folder named <span class="navy"><strong>nimbus_code</strong></span></p>
 <div class="imageblock">
 <div class="content">
-<img src="CL333.png" alt="cl1">
+<img src="CL111.png" alt="cl1">
 </div>
 </div>
 </li>
@@ -920,7 +923,7 @@ Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.x</stro
 <p>Navigate to the folder</p>
 <div class="imageblock">
 <div class="content">
-<img src="CL44.png" alt="cl1">
+<img src="CL222.png" alt="cl1">
 </div>
 </div>
 </li>
@@ -928,14 +931,14 @@ Above s/w versions are compatible with Nimbus f/w version    <strong>1.1.x</stro
 <p>Run the following command</p>
 <div class="listingblock">
 <div class="content">
-<pre><strong>git clone -b 1.1.x
+<pre><strong>git clone -b 2.0.x
 https://github.com/openanthem/nimbus-core.git
 </strong></pre>
 </div>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="CL55.png" alt="cl1">
+<img src="CL333.png" alt="cl1">
 </div>
 </div>
 </li>
@@ -943,7 +946,7 @@ https://github.com/openanthem/nimbus-core.git
 <p>Navigate to <span class="navy"><strong>nimbus-core</strong></span> folder which resides in your new folder</p>
 <div class="imageblock">
 <div class="content">
-<img src="CL66.png" alt="cl1">
+<img src="CL444.png" alt="cl1">
 </div>
 </div>
 </li>
@@ -956,7 +959,7 @@ https://github.com/openanthem/nimbus-core.git
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="CL77.png" alt="cl1">
+<img src="CL555.png" alt="cl1">
 </div>
 </div>
 </li>
@@ -964,7 +967,7 @@ https://github.com/openanthem/nimbus-core.git
 <p>You can see a <strong> "##Finished building" </strong> message</p>
 <div class="imageblock">
 <div class="content">
-<img src="CL88.png" alt="cl1">
+<img src="CL666.png" alt="cl1">
 </div>
 </div>
 </li>
@@ -978,6 +981,19 @@ https://github.com/openanthem/nimbus-core.git
 <h3 id="_examples">5. Examples</h3>
 <div class="paragraph">
 <p>All the examples can be cloned from the below two github repositories</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+Point to the latest framework(<span class="blue"><strong>
+<a href="https://github.com/openanthem/nimbus-core/blob/2.0.x/pom.xml" class="bare">https://github.com/openanthem/nimbus-core/blob/2.0.x/pom.xml</a> </strong></span> ) and check and update the nimbus-parent version in the pom.xml of the below examples
+</td>
+</tr>
+</table>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -3276,7 +3292,7 @@ Password: ArR&GX8Z</strong></pre>
 <div id="footer">
 <div id="footer-text">
 Version v1.1<br>
-Last updated 2018-11-09 16:08:27 EST
+Last updated 2019-01-17 15:24:12 EST
 </div>
 </div>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prettify/r298/prettify.min.css">
